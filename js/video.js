@@ -1,0 +1,3 @@
+(function($){
+   $('.videoElement').mediaelementplayer();
+})(jQuery);
