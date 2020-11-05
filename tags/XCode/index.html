@@ -5,7 +5,7 @@
   
   <title>XCode | Ryan Wu</title>
   <meta name="author" content="Ryan Wu">
-  <meta name="description" content="Ryan Wu, Front end JavaScirpt + iOS developer, Co-founder of EREO Creatives">
+  <meta name="description" content="Ryan Wu, JavaScript lover. Full stack JavaScript + iOS developer. Co-founder of EREO Creatives">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:site_name" content="Ryan Wu"/>
   <meta property="og:image" content="http://www.ereo-creatives.com/img/team/img-1.png"/>
@@ -35,14 +35,14 @@
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css" />
 
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 
 <body>
 	<div id="page-wrap">
 	<header id="header" class="inner"><div class="alignleft">
 	<h1><a href="/">Ryan Wu</a></h1>
-	<h2>I code to make people live better.</h2>
+	<h2>I code and I know things</h2>
 </div>
 <nav id="main-nav" class="alignright">
 	<ul>
@@ -61,8 +61,6 @@
 		<li class="menuItem"><a href="/archives">Archives</a></li>
 		
 		<li class="menuItem"><a href="/about">About</a></li>
-		
-		<li class="menuItem"><a href="http://zhblog.ryanwu.me">中文博客</a></li>
 		
 	</ul>
 	<div class="clearfix"></div>
@@ -104,23 +102,23 @@
     </header>
     <div class="entry">
       
-        <div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-Ns45tdOFU94/UIraNuH1njI/AAAAAAAACfI/OwiurWlAmTs/s1600/new_hero20110308.jpeg" target="_blank" rel="noopener"><img src="http://4.bp.blogspot.com/-Ns45tdOFU94/UIraNuH1njI/AAAAAAAACfI/OwiurWlAmTs/s1600/new_hero20110308.jpeg" alt=""></a></div><br>以目前來說，iOS的Developer大部分都還是使用XCode來做為主要的開發工具。<br>但只要用過就知道，XCode充滿了許多神祕的問題：<br><br><em>   XCode WTF&nbsp;<a href="http://xcodewtf.tumblr.com/" target="_blank" rel="noopener">http://xcodewtf.tumblr.com/</a>&nbsp;
-</em>   Text from XCode&nbsp;<a href="http://www.textfromxcode.com/" target="_blank" rel="noopener">http://www.textfromxcode.com/</a><br>*   @wtfxcode&nbsp;<a href="https://twitter.com/wtfxcode" target="_blank" rel="noopener">https://twitter.com/wtfxcode</a>&nbsp;<div>嗯… 其實XCode真的很需要釋出開發Plug-in的API，就算有<a href="http://stackoverflow.com/questions/6316921/xcode-4-plugin-development" target="_blank" rel="noopener">廣大的回響</a>，官方目前似乎對於這件事情還是<a href="http://openradar.appspot.com/8622025" target="_blank" rel="noopener">沒有什麼反應</a>。</div><div>一山還有一山高還是有很多高手，弄出了一些好用的Plug-In，也就是今天要介紹的內容。</div><div></div>
+        <div class="separator" style="clear: both; text-align: center;"><a target="_blank" rel="noopener" href="http://4.bp.blogspot.com/-Ns45tdOFU94/UIraNuH1njI/AAAAAAAACfI/OwiurWlAmTs/s1600/new_hero20110308.jpeg"><img src="http://4.bp.blogspot.com/-Ns45tdOFU94/UIraNuH1njI/AAAAAAAACfI/OwiurWlAmTs/s1600/new_hero20110308.jpeg" alt=""></a></div><br>以目前來說，iOS的Developer大部分都還是使用XCode來做為主要的開發工具。<br>但只要用過就知道，XCode充滿了許多神祕的問題：<br><br><em>   XCode WTF&nbsp;<a target="_blank" rel="noopener" href="http://xcodewtf.tumblr.com/">http://xcodewtf.tumblr.com/</a>&nbsp;
+</em>   Text from XCode&nbsp;<a target="_blank" rel="noopener" href="http://www.textfromxcode.com/">http://www.textfromxcode.com/</a><br>*   @wtfxcode&nbsp;<a target="_blank" rel="noopener" href="https://twitter.com/wtfxcode">https://twitter.com/wtfxcode</a>&nbsp;<div>嗯… 其實XCode真的很需要釋出開發Plug-in的API，就算有<a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/6316921/xcode-4-plugin-development">廣大的回響</a>，官方目前似乎對於這件事情還是<a target="_blank" rel="noopener" href="http://openradar.appspot.com/8622025">沒有什麼反應</a>。</div><div>一山還有一山高還是有很多高手，弄出了一些好用的Plug-In，也就是今天要介紹的內容。</div><div></div>
 
 <h3 id="第一套：ColorSense-nbsp"><a href="#第一套：ColorSense-nbsp" class="headerlink" title="第一套：ColorSense&nbsp;"></a>第一套：ColorSense&nbsp;</h3><p><strong>說明</strong><br>一般我們在Objective-C裡面，時常會使用到UIColor，不過每次都要請視覺設計師大大給或是自己去找詳細的RGBA實在很麻煩。加入這個Plug-In，一個正常的UIColor Syntax(例如: [UIColor redColor]) 上面就會出現色塊，點擊之後就會出現Mac OS X的Color Panel供選擇，非常方便。</p>
-<p><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-dT9gLqI-pwE/UIraUHSjb9I/AAAAAAAACfQ/sn5E_RMkon0/s1600/cs.png" target="_blank" rel="noopener"><img src="http://3.bp.blogspot.com/-dT9gLqI-pwE/UIraUHSjb9I/AAAAAAAACfQ/sn5E_RMkon0/s640/cs.png" alt=""></a></div><br>上面是我自己的螢幕截圖，身為一個Web Developer，我另外裝了<a href="http://wafflesoftware.net/hexpicker/" target="_blank" rel="noopener">Hex Color Picker</a>，使得我的Color Panel還可以得到Hex值。<br><strong>安裝方式：</strong></p>
+<p><div class="separator" style="clear: both; text-align: center;"><a target="_blank" rel="noopener" href="http://3.bp.blogspot.com/-dT9gLqI-pwE/UIraUHSjb9I/AAAAAAAACfQ/sn5E_RMkon0/s1600/cs.png"><img src="http://3.bp.blogspot.com/-dT9gLqI-pwE/UIraUHSjb9I/AAAAAAAACfQ/sn5E_RMkon0/s640/cs.png" alt=""></a></div><br>上面是我自己的螢幕截圖，身為一個Web Developer，我另外裝了<a target="_blank" rel="noopener" href="http://wafflesoftware.net/hexpicker/">Hex Color Picker</a>，使得我的Color Panel還可以得到Hex值。<br><strong>安裝方式：</strong></p>
 <ol>
 <li>到官方的Git Repo，下載整個Project (git clone)</li>
 <li>用XCode開啟ColorSense專案</li>
 <li>Build ColorSense專案</li>
-<li>重啟XCode<div>這樣就完成了！！</div><div></div><strong>官方網址（Git Repo)&nbsp;</strong><br><a href="https://github.com/omz/ColorSense-for-Xcode" target="_blank" rel="noopener">https://github.com/omz/ColorSense-for-Xcode</a></li>
+<li>重啟XCode<div>這樣就完成了！！</div><div></div><strong>官方網址（Git Repo)&nbsp;</strong><br><a target="_blank" rel="noopener" href="https://github.com/omz/ColorSense-for-Xcode">https://github.com/omz/ColorSense-for-Xcode</a></li>
 </ol>
-<h3 id="第二套：CodePilot"><a href="#第二套：CodePilot" class="headerlink" title="第二套：CodePilot"></a>第二套：CodePilot</h3><p><strong>說明</strong><br>XCode有自己的一套檔案管理方式，並不是按照實際的資料夾排列，而是使用群組的觀念，讓檔案在開發環境中看起來是整齊的。但是開發久了專案大了，或是加了很多其他Library，還是難免會有找不到檔案的情形。一直都很希望XCode可以像是<a href="http://www.sublimetext.com/2" target="_blank" rel="noopener">Sublime Text 2</a> 或是 <a href="http://www.alfredapp.com/" target="_blank" rel="noopener">Alfred</a> 一樣有個快速簡便的尋找檔案方式。於是我找到了CodePilot 這個Plug-in。<br><span id="goog_334522430"></span><span id="goog_334522431"></span></p>
-<p><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-fJKwgwQIiSc/UIkMYMlCjcI/AAAAAAAACd0/wQGRPTyn4n0/s1600/cp.jpg" target="_blank" rel="noopener"><img src="http://2.bp.blogspot.com/-fJKwgwQIiSc/UIkMYMlCjcI/AAAAAAAACd0/wQGRPTyn4n0/s320/cp.jpg" alt=""></a></div><br>以上是截圖。<br><strong>安裝方式</strong></p>
+<h3 id="第二套：CodePilot"><a href="#第二套：CodePilot" class="headerlink" title="第二套：CodePilot"></a>第二套：CodePilot</h3><p><strong>說明</strong><br>XCode有自己的一套檔案管理方式，並不是按照實際的資料夾排列，而是使用群組的觀念，讓檔案在開發環境中看起來是整齊的。但是開發久了專案大了，或是加了很多其他Library，還是難免會有找不到檔案的情形。一直都很希望XCode可以像是<a target="_blank" rel="noopener" href="http://www.sublimetext.com/2">Sublime Text 2</a> 或是 <a target="_blank" rel="noopener" href="http://www.alfredapp.com/">Alfred</a> 一樣有個快速簡便的尋找檔案方式。於是我找到了CodePilot 這個Plug-in。<br><span id="goog_334522430"></span><span id="goog_334522431"></span></p>
+<p><div class="separator" style="clear: both; text-align: center;"><a target="_blank" rel="noopener" href="http://2.bp.blogspot.com/-fJKwgwQIiSc/UIkMYMlCjcI/AAAAAAAACd0/wQGRPTyn4n0/s1600/cp.jpg"><img src="http://2.bp.blogspot.com/-fJKwgwQIiSc/UIkMYMlCjcI/AAAAAAAACd0/wQGRPTyn4n0/s320/cp.jpg" alt=""></a></div><br>以上是截圖。<br><strong>安裝方式</strong></p>
 <ol>
 <li>將下載下來的檔案解壓</li>
 <li>把&nbsp;CodePilot2.xcplugin 放到 “~/Library/Developer/Xcode/Third-Party Plug-ins” (目前我是使用App Store抓下來的Xcode 4.5.1)</li>
-<li>重啟XCode<div>啟動的快捷健是Shift + Command + X (<img src="http://www.danrodney.com/mac/img/menusym-shift.gif" alt=""><img src="http://www.danrodney.com/mac/img/menusym-command.gif" alt="">X)</div><div>是不是很好找呢～？</div><div></div><strong>官方網址</strong><br><a href="http://codepilot.cc/" target="_blank" rel="noopener">http://codepilot.cc/</a></li>
+<li>重啟XCode<div>啟動的快捷健是Shift + Command + X (<img src="http://www.danrodney.com/mac/img/menusym-shift.gif" alt=""><img src="http://www.danrodney.com/mac/img/menusym-command.gif" alt="">X)</div><div>是不是很好找呢～？</div><div></div><strong>官方網址</strong><br><a target="_blank" rel="noopener" href="http://codepilot.cc/">http://codepilot.cc/</a></li>
 </ol>
 
       
@@ -156,20 +154,16 @@
 </div>
 
   <div class="widget gravatar">
-    <div class="entry">
-        Halo, This is <strong>Ryan Wu</strong> from Taiwan.
-    </div>
-    
     <div class="gravatar-wrap">
       <a href="/about/">
-        <img class="gravatar-img" src="https://www.gravatar.com/avatar/598af4e5c82136268d9009571be31026?s=150" alt="Ryan Wu">    
+        <img class="gravatar-img" src="https://www.ereo-creatives.com/img/team/img-1.png" alt="Ryan Wu">
       </a>
       
-      <a href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
+      <a target="_blank" rel="noopener" href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       
     </div>
-    
+
 </div>
 
   
@@ -212,7 +206,7 @@
   
   Ryan Wu - <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>
   
-  <p>It's all yours under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
+  <p>It's all yours under <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
 </div>
 <div class="clearfix"></div>
 </footer>

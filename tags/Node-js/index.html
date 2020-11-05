@@ -5,7 +5,7 @@
   
   <title>Node.js | Ryan Wu</title>
   <meta name="author" content="Ryan Wu">
-  <meta name="description" content="Ryan Wu, Front end JavaScirpt + iOS developer, Co-founder of EREO Creatives">
+  <meta name="description" content="Ryan Wu, JavaScript lover. Full stack JavaScript + iOS developer. Co-founder of EREO Creatives">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:site_name" content="Ryan Wu"/>
   <meta property="og:image" content="http://www.ereo-creatives.com/img/team/img-1.png"/>
@@ -35,14 +35,14 @@
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css" />
 
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 
 <body>
 	<div id="page-wrap">
 	<header id="header" class="inner"><div class="alignleft">
 	<h1><a href="/">Ryan Wu</a></h1>
-	<h2>I code to make people live better.</h2>
+	<h2>I code and I know things</h2>
 </div>
 <nav id="main-nav" class="alignright">
 	<ul>
@@ -61,8 +61,6 @@
 		<li class="menuItem"><a href="/archives">Archives</a></li>
 		
 		<li class="menuItem"><a href="/about">About</a></li>
-		
-		<li class="menuItem"><a href="http://zhblog.ryanwu.me">中文博客</a></li>
 		
 	</ul>
 	<div class="clearfix"></div>
@@ -104,19 +102,16 @@
     </header>
     <div class="entry">
       
-        <p>Usually I used to use a single server to host several developing or experimental projects. Thus I need a quick solution to forward different request to these services. I had tried to use <a href="http://nginx.org/" target="_blank" rel="noopener">nginx</a> before. But now I have a easier way to do so.</p>
+        <p>Usually I used to use a single server to host several developing or experimental projects. Thus I need a quick solution to forward different request to these services. I had tried to use <a target="_blank" rel="noopener" href="http://nginx.org/">nginx</a> before. But now I have a easier way to do so.</p>
 <ol>
 <li><p><strong>require modules</strong></p>
 <ul>
-<li><a href="http://underscorejs.org/" target="_blank" rel="noopener">underscode</a></li>
-<li><a href="https://github.com/nodejitsu/node-http-proxy" target="_blank" rel="noopener">node-http-proxy</a><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>),</span><br><span class="line">    _ = <span class="built_in">require</span>(<span class="string">'underscore'</span>),</span><br><span class="line">    httpProxy = <span class="built_in">require</span>(<span class="string">'http-proxy'</span>);</span><br></pre></td></tr></table></figure>
-</li>
+<li><a target="_blank" rel="noopener" href="http://underscorejs.org/">underscode</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/nodejitsu/node-http-proxy">node-http-proxy</a><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>),</span><br><span class="line">    _ = <span class="built_in">require</span>(<span class="string">&#x27;underscore&#x27;</span>),</span><br><span class="line">    httpProxy = <span class="built_in">require</span>(<span class="string">&#x27;http-proxy&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p><strong>config proxy(forward) and redirect mappings</strong> (hostname based)</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> proxyOptions = &#123;</span><br><span class="line">  router: &#123;</span><br><span class="line">    <span class="string">"api.testAppX.com"</span>     : <span class="string">'localhost:2041'</span>,</span><br><span class="line">    <span class="string">"dev.api.testAppX.com"</span> : <span class="string">'localhost:2042'</span>,</span><br><span class="line">    <span class="string">"www.testAppY.com"</span>     : <span class="string">'localhost:10520'</span>,</span><br><span class="line">    <span class="string">"test.oldApps.com"</span>     : <span class="string">'localhost:10520'</span>,</span><br><span class="line">    <span class="string">'bc.ryanwu.co'</span>         : <span class="string">'localhost:8888'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br><span class="line">  redirectOptions = &#123;</span><br><span class="line">    <span class="string">'olddomain.com'</span>      : <span class="string">'http://newdomain.com/'</span>,</span><br><span class="line">    <span class="string">'www.olddomain.com'</span>  : <span class="string">'http://newdomain.com/'</span>,</span><br><span class="line">    <span class="string">'blog.olddomain.com'</span> : <span class="string">'http://newdomain.com/blog/'</span></span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> proxyOptions = &#123;</span><br><span class="line">  router: &#123;</span><br><span class="line">    <span class="string">&quot;api.testAppX.com&quot;</span>     : <span class="string">&#x27;localhost:2041&#x27;</span>,</span><br><span class="line">    <span class="string">&quot;dev.api.testAppX.com&quot;</span> : <span class="string">&#x27;localhost:2042&#x27;</span>,</span><br><span class="line">    <span class="string">&quot;www.testAppY.com&quot;</span>     : <span class="string">&#x27;localhost:10520&#x27;</span>,</span><br><span class="line">    <span class="string">&quot;test.oldApps.com&quot;</span>     : <span class="string">&#x27;localhost:10520&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;bc.ryanwu.co&#x27;</span>         : <span class="string">&#x27;localhost:8888&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br><span class="line">  redirectOptions = &#123;</span><br><span class="line">    <span class="string">&#x27;olddomain.com&#x27;</span>      : <span class="string">&#x27;http://newdomain.com/&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;www.olddomain.com&#x27;</span>  : <span class="string">&#x27;http://newdomain.com/&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;blog.olddomain.com&#x27;</span> : <span class="string">&#x27;http://newdomain.com/blog/&#x27;</span></span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer>
@@ -161,32 +156,32 @@
       
       
   
-    <h1 class="title"><a href="/2013/06/display-remote-nodejs-service-logs-on.html">Display remote Node.JS service logs on Chrome Console</a></h1>
+    <h1 class="title"><a target="_blank" rel="noopener" href="//display-remote-nodejs-service-logs-on">Display remote Node.JS service logs on Chrome Console</a></h1>
   
 
     </header>
     <div class="entry">
       
-        <p>In recent years, we got plenty of <a href="http://en.wikipedia.org/wiki/Platform_as_a_service" target="_blank" rel="noopener">PaaS</a> services which provide very simple and easy way to deploy our&nbsp;Node.JS services.</p>
+        <p>In recent years, we got plenty of <a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Platform_as_a_service">PaaS</a> services which provide very simple and easy way to deploy our&nbsp;Node.JS services.</p>
 <p>Usually after deploying my service, I have to use the command line tools or visit some very slow web pages to access the server logs. It’s really waste my time.</p>
-<p>But today, I want to introduce a tool, <strong><a href="http://craig.is/writing/chrome-logger" target="_blank" rel="noopener">Chrome Logger</a>, </strong>it provides a way to <strong><span style="color: #e69138;">display server logs into Chrome Developer Tool’s Console.</span></strong></p>
+<p>But today, I want to introduce a tool, <strong><a target="_blank" rel="noopener" href="http://craig.is/writing/chrome-logger">Chrome Logger</a>, </strong>it provides a way to <strong><span style="color: #e69138;">display server logs into Chrome Developer Tool’s Console.</span></strong></p>
 <p><a href="/images/20130625_test1.png"><img src="/images/20130625_test1.png" alt=""></a></p>
-<p><a href="https://chrome.google.com/webstore/detail/chromephp/noaneddfkdjfnfdakjjmocngnfkfehhd" target="_blank" rel="noopener">Install it</a>,&nbsp;then&nbsp;visit my <a href="http://chromelogger.herokuapp.com/" target="_blank" rel="noopener">sample project on Heroku</a>&nbsp;to see what’s going on.</p>
+<p><a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/chromephp/noaneddfkdjfnfdakjjmocngnfkfehhd">Install it</a>,&nbsp;then&nbsp;visit my <a target="_blank" rel="noopener" href="http://chromelogger.herokuapp.com/">sample project on Heroku</a>&nbsp;to see what’s going on.</p>
 <p><a href="/images/20130625_test1.png"><img src="/images/20130625_test1.png" alt=""></a></p>
 <ul>
 <li>Sample Test Project on Github</li>
 </ul>
 <p><strong>Update 06/25 00:40:</strong></p>
 <ul>
-<li>If you’re using <a href="http://expressjs.com/" target="_blank" rel="noopener">ExpressJS</a>, you can simple log your error like following error handling middleware<script src="//gist.github.com/66d5ac94916c6ab0a545.js"></script>
+<li>If you’re using <a target="_blank" rel="noopener" href="http://expressjs.com/">ExpressJS</a>, you can simple log your error like following error handling middleware<script src="//gist.github.com/66d5ac94916c6ab0a545.js"></script>
 </li>
 </ul>
 <p><strong>Update 06/25 01:50:</strong></p>
 <ul>
-<li>After reading the <a href="http://devtoolsecrets.com/" target="_blank" rel="noopener">Secret of Browser Developer Tool</a>. I updated ChromeLogger(<a href="https://github.com/ryanhanwu/chromelogger" target="_blank" rel="noopener">my forked repo</a>) and express-chrome-logger(<a href="https://github.com/ryanhanwu/express-chrome-logger" target="_blank" rel="noopener">my forked repo</a>). Now it supports&nbsp;<strong>TABLE display</strong></li>
+<li>After reading the <a target="_blank" rel="noopener" href="http://devtoolsecrets.com/">Secret of Browser Developer Tool</a>. I updated ChromeLogger(<a target="_blank" rel="noopener" href="https://github.com/ryanhanwu/chromelogger">my forked repo</a>) and express-chrome-logger(<a target="_blank" rel="noopener" href="https://github.com/ryanhanwu/express-chrome-logger">my forked repo</a>). Now it supports&nbsp;<strong>TABLE display</strong></li>
 </ul>
 <p><a href="/images/20130625_test2.png"><img src="/images/20130625_test2.png" alt=""></a></p>
-<p>Pull requests sent :&nbsp;<a href="https://github.com/ccampbell/chromelogger/pull/24" target="_blank" rel="noopener">chromelogger</a>&nbsp;&amp;&nbsp;<a href="https://github.com/olahol/express-chrome-logger/pull/1" target="_blank" rel="noopener">express-chrome-logger</a>.</p>
+<p>Pull requests sent :&nbsp;<a target="_blank" rel="noopener" href="https://github.com/ccampbell/chromelogger/pull/24">chromelogger</a>&nbsp;&amp;&nbsp;<a target="_blank" rel="noopener" href="https://github.com/olahol/express-chrome-logger/pull/1">express-chrome-logger</a>.</p>
 <p>Good luck to myself.</p>
 
       
@@ -196,7 +191,7 @@
         
         
         <div class="comments alignright">
-          <a href="/2013/06/display-remote-nodejs-service-logs-on.html#disqus_thread" class="comment-link">Comments</a>
+          <a target="_blank" rel="noopener" href="//display-remote-nodejs-service-logs-on#disqus_thread" class="comment-link">Comments</a>
         </div>
         
       
@@ -241,7 +236,7 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">python -m SimpleHTTPServer [port]</span><br></pre></td></tr></table></figure>
 <p>And I have to work under Micro$oft Windows sometimes…</p>
 <p><strong><span style="color: blue;">F5&nbsp;</span></strong></p>
-<p><a href="http://www.getf5.com/" target="_blank" rel="noopener">http://www.getf5.com/</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.getf5.com/">http://www.getf5.com/</a></p>
 <p><strong>Install :&nbsp;</strong></p>
 <ul>
 <li>Download the F5 application</li>
@@ -252,9 +247,8 @@
 </ul>
 <p>But i prefer nodejs based…</p>
 <p><span style="color: blue;">NodeJS&nbsp;</span></p>
-<p><strong><a href="https://github.com/andrewpthorp/simple-http-server" target="_blank" rel="noopener">Simple http server</a></strong></p>
-<p><strong>Install :&nbsp;</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install simple-http-server -g</span><br></pre></td></tr></table></figure></p>
-<p><strong>Usage :&nbsp;</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nserver</span><br></pre></td></tr></table></figure></p>
+<p><strong><a target="_blank" rel="noopener" href="https://github.com/andrewpthorp/simple-http-server">Simple http server</a></strong></p>
+<p><strong>Install :&nbsp;</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install simple-http-server -g</span><br></pre></td></tr></table></figure><br><strong>Usage :&nbsp;</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nserver</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -289,20 +283,16 @@
 </div>
 
   <div class="widget gravatar">
-    <div class="entry">
-        Halo, This is <strong>Ryan Wu</strong> from Taiwan.
-    </div>
-    
     <div class="gravatar-wrap">
       <a href="/about/">
-        <img class="gravatar-img" src="https://www.gravatar.com/avatar/598af4e5c82136268d9009571be31026?s=150" alt="Ryan Wu">    
+        <img class="gravatar-img" src="https://www.ereo-creatives.com/img/team/img-1.png" alt="Ryan Wu">
       </a>
       
-      <a href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
+      <a target="_blank" rel="noopener" href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       
     </div>
-    
+
 </div>
 
   
@@ -345,7 +335,7 @@
   
   Ryan Wu - <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>
   
-  <p>It's all yours under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
+  <p>It's all yours under <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
 </div>
 <div class="clearfix"></div>
 </footer>

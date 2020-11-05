@@ -5,7 +5,7 @@
   
   <title>How to monitor iPhone&#39;s HTTP traffic | Ryan Wu</title>
   <meta name="author" content="Ryan Wu">
-  <meta name="description" content="Ryan Wu, Front end JavaScirpt + iOS developer, Co-founder of EREO Creatives">
+  <meta name="description" content="Ryan Wu, JavaScript lover. Full stack JavaScript + iOS developer. Co-founder of EREO Creatives">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:title" content="How to monitor iPhone&#39;s HTTP traffic"/>
   <meta property="og:site_name" content="Ryan Wu"/>
@@ -36,14 +36,14 @@
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css" />
 
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 
 <body>
 	<div id="page-wrap">
 	<header id="header" class="inner"><div class="alignleft">
 	<h1><a href="/">Ryan Wu</a></h1>
-	<h2>I code to make people live better.</h2>
+	<h2>I code and I know things</h2>
 </div>
 <nav id="main-nav" class="alignright">
 	<ul>
@@ -62,8 +62,6 @@
 		<li class="menuItem"><a href="/archives">Archives</a></li>
 		
 		<li class="menuItem"><a href="/about">About</a></li>
-		
-		<li class="menuItem"><a href="http://zhblog.ryanwu.me">中文博客</a></li>
 		
 	</ul>
 	<div class="clearfix"></div>
@@ -102,7 +100,7 @@
       
         <p>I usually wonder how my iPhone apps communicate with their servers. I had a debate with my ex-coworker about the security of app communication. He thinks we can use simple HTTP protocol for app communication, including authentication. But I insist that we should use more secure way for transmission in apps.</p>
 <p>Let me use an example to demonstrate how little an app protects the content and how easy it is to monitor the traffic of an iPhone app.</p>
-<p>According to Apple’s document <a href="https://developer.apple.com/library/mac/qa/qa1176/_index.html" target="_blank" rel="noopener">here</a>. I choose <strong><em>tcpdump</em></strong> and take <a href="https://itunes.apple.com/app/id403756560?mt=8" target="_blank" rel="noopener">7-11 Taiwan app</a> as an example.</p>
+<p>According to Apple’s document <a target="_blank" rel="noopener" href="https://developer.apple.com/library/mac/qa/qa1176/_index.html">here</a>. I choose <strong><em>tcpdump</em></strong> and take <a target="_blank" rel="noopener" href="https://itunes.apple.com/app/id403756560?mt=8">7-11 Taiwan app</a> as an example.</p>
 <p><a href="/images/20131113_app1.png"><img src="/images/20131113_app1.PNG" alt=""></a></p>
 <p>This app provides coupon for Starbucks. I want to get the content of this coupon.</p>
 <p>The steps are as following :<br><a id="more"></a></p>
@@ -115,20 +113,20 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;rvictl -s UUID</span><br></pre></td></tr></table></figure>
 <h3 id="3-Check-whether-your-device-is-activated"><a href="#3-Check-whether-your-device-is-activated" class="headerlink" title="3. Check whether your device is activated"></a>3. Check whether your device is activated</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; rvictl -l</span><br><span class="line">Current Active Devices:</span><br><span class="line">    [1] YOUR UUID</span><br></pre></td></tr></table></figure>
 <h3 id="4-Start-monitering"><a href="#4-Start-monitering" class="headerlink" title="4. Start monitering"></a>4. Start monitering</h3><h5 id="Simplest-way"><a href="#Simplest-way" class="headerlink" title="Simplest way"></a>Simplest way</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo tcpdump -n -t -i rvi0 -q -A tcp</span><br></pre></td></tr></table></figure>
-<h5 id="Including-request-and-response-headers-and-message-body"><a href="#Including-request-and-response-headers-and-message-body" class="headerlink" title="Including request and response headers and message body"></a>Including request and response headers and message body</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo tcpdump -t -i rvi0 -A -s 0 &apos;tcp port 80 and (((ip[2:2] - ((ip[0]&amp;0xf)&lt;&lt;2)) - ((tcp[12]&amp;0xf0)&gt;&gt;2)) != 0)&apos;</span><br></pre></td></tr></table></figure>
-<h5 id="GET-Only"><a href="#GET-Only" class="headerlink" title="GET Only"></a>GET Only</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo tcpdump -t -i rvi0 -s 0 -A &apos;tcp[((tcp[12:1] &amp; 0xf0) &gt;&gt; 2):4] = 0x47455420&apos;</span><br></pre></td></tr></table></figure>
-<h5 id="POST-Only"><a href="#POST-Only" class="headerlink" title="POST Only"></a>POST Only</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo tcpdump -t -i rvi0 -s 0 -A &apos;tcp dst port 80 and (tcp[((tcp[12:1] &amp; 0xf0) &gt;&gt; 2):4] = 0x504f5354)&apos;</span><br></pre></td></tr></table></figure>
+<h5 id="Including-request-and-response-headers-and-message-body"><a href="#Including-request-and-response-headers-and-message-body" class="headerlink" title="Including request and response headers and message body"></a>Including request and response headers and message body</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo tcpdump -t -i rvi0 -A -s 0 &#39;tcp port 80 and (((ip[2:2] - ((ip[0]&amp;0xf)&lt;&lt;2)) - ((tcp[12]&amp;0xf0)&gt;&gt;2)) !&#x3D; 0)&#39;</span><br></pre></td></tr></table></figure>
+<h5 id="GET-Only"><a href="#GET-Only" class="headerlink" title="GET Only"></a>GET Only</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo tcpdump -t -i rvi0 -s 0 -A &#39;tcp[((tcp[12:1] &amp; 0xf0) &gt;&gt; 2):4] &#x3D; 0x47455420&#39;</span><br></pre></td></tr></table></figure>
+<h5 id="POST-Only"><a href="#POST-Only" class="headerlink" title="POST Only"></a>POST Only</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo tcpdump -t -i rvi0 -s 0 -A &#39;tcp dst port 80 and (tcp[((tcp[12:1] &amp; 0xf0) &gt;&gt; 2):4] &#x3D; 0x504f5354)&#39;</span><br></pre></td></tr></table></figure>
 <h3 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h3><p>The result will be like this</p>
 <p><a href="/images/20131113_app2.png"><img src="/images/20131113_app2.PNG" alt=""></a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">IP XXXXXXXX.61956 &gt; static-ip-38-69-56-61.rev.dyxnet.com.http</span><br><span class="line">....X...1.....E.....@.@......i=8E&amp;...P..z.h..... ........</span><br><span class="line">/.&#125;..Q.AGET /Starbucks/act_ns/2013_chrismas/css/images/ajax-loader.gif HTTP/1.1</span><br><span class="line">Host: event.e21magicmedia.com.tw</span><br><span class="line">Referer: http://event.e21magicmedia.com.tw/Starbucks/act_ns/2013_chrismas/index.html</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">Accept: */*</span><br><span class="line">Cookie: _ga=GA1.XXXXXXXXX</span><br><span class="line">Accept-Language: en-us</span><br><span class="line">Connection: keep-alive</span><br><span class="line">User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 7_0_3 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/11B511</span><br></pre></td></tr></table></figure>
-<p>Wow ~ <a href="http://event.e21magicmedia.com.tw/Starbucks/act_ns/2013_chrismas/index.html" target="_blank" rel="noopener">http://event.e21magicmedia.com.tw/Starbucks/act_ns/2013_chrismas/index.html</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">IP XXXXXXXX.61956 &gt; static-ip-38-69-56-61.rev.dyxnet.com.http</span><br><span class="line">....X...1.....E.....@.@......i&#x3D;8E&amp;...P..z.h..... ........</span><br><span class="line">&#x2F;.&#125;..Q.AGET &#x2F;Starbucks&#x2F;act_ns&#x2F;2013_chrismas&#x2F;css&#x2F;images&#x2F;ajax-loader.gif HTTP&#x2F;1.1</span><br><span class="line">Host: event.e21magicmedia.com.tw</span><br><span class="line">Referer: http:&#x2F;&#x2F;event.e21magicmedia.com.tw&#x2F;Starbucks&#x2F;act_ns&#x2F;2013_chrismas&#x2F;index.html</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">Accept: *&#x2F;*</span><br><span class="line">Cookie: _ga&#x3D;GA1.XXXXXXXXX</span><br><span class="line">Accept-Language: en-us</span><br><span class="line">Connection: keep-alive</span><br><span class="line">User-Agent: Mozilla&#x2F;5.0 (iPhone; CPU iPhone OS 7_0_3 like Mac OS X) AppleWebKit&#x2F;537.51.1 (KHTML, like Gecko) Mobile&#x2F;11B511</span><br></pre></td></tr></table></figure>
+<p>Wow ~ <a target="_blank" rel="noopener" href="http://event.e21magicmedia.com.tw/Starbucks/act_ns/2013_chrismas/index.html">http://event.e21magicmedia.com.tw/Starbucks/act_ns/2013_chrismas/index.html</a></p>
 <blockquote>
 <p>Now you can get the Christmas discount(Buy 1 get 1 free) without downloading the app.</p>
 </blockquote>
-<p>Then you can use Chrome Developer Tool and <strong><em>inspect</em></strong> the <a href="http://event.e21magicmedia.com.tw/Starbucks/act_ns/2013_chrismas/images/coupon.jpg" target="_blank" rel="noopener">image</a> for you</p>
+<p>Then you can use Chrome Developer Tool and <strong><em>inspect</em></strong> the <a target="_blank" rel="noopener" href="http://event.e21magicmedia.com.tw/Starbucks/act_ns/2013_chrismas/images/coupon.jpg">image</a> for you</p>
 <h3 id="Wrap-Up"><a href="#Wrap-Up" class="headerlink" title="Wrap Up"></a>Wrap Up</h3><p>Don’t use simple web view to protect your content. HTTPs and session based authentication could be a better solution.</p>
 <p><strong><em>This article can be only used for education. All rights of images belong to original company </em></strong></p>
-<p>Reference :<br><a href="http://stackoverflow.com/questions/4777042/can-i-use-tcpdump-to-get-http-requests-response-header-and-response-body" target="_blank" rel="noopener">Can I use tcpdump to get HTTP requests, response header and response body?</a><br><a href="http://useyourloaf.com/blog/2012/02/07/remote-packet-capture-for-ios-devices.html" target="_blank" rel="noopener">Remote Packet Capture for iOS Devices</a></p>
+<p>Reference :<br><a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/4777042/can-i-use-tcpdump-to-get-http-requests-response-header-and-response-body">Can I use tcpdump to get HTTP requests, response header and response body?</a><br><a target="_blank" rel="noopener" href="http://useyourloaf.com/blog/2012/02/07/remote-packet-capture-for-ios-devices.html">Remote Packet Capture for iOS Devices</a></p>
 
       
     </div>
@@ -175,7 +173,7 @@
 <section id="comment">
   <h1 class="title">Comments</h1>
   <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
 </section>
 </div></div>
@@ -188,20 +186,16 @@
 </div>
 
   <div class="widget gravatar">
-    <div class="entry">
-        Halo, This is <strong>Ryan Wu</strong> from Taiwan.
-    </div>
-    
     <div class="gravatar-wrap">
       <a href="/about/">
-        <img class="gravatar-img" src="https://www.gravatar.com/avatar/598af4e5c82136268d9009571be31026?s=150" alt="Ryan Wu">    
+        <img class="gravatar-img" src="https://www.ereo-creatives.com/img/team/img-1.png" alt="Ryan Wu">
       </a>
       
-      <a href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
+      <a target="_blank" rel="noopener" href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       
     </div>
-    
+
 </div>
 
   
@@ -244,7 +238,7 @@
   
   Ryan Wu - <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>
   
-  <p>It's all yours under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
+  <p>It's all yours under <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
 </div>
 <div class="clearfix"></div>
 </footer>

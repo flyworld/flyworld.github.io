@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Proxy | Ryan Wu</title>
+  <title>Archives: 2019 | Ryan Wu</title>
   <meta name="author" content="Ryan Wu">
   <meta name="description" content="Ryan Wu, JavaScript lover. Full stack JavaScript + iOS developer. Co-founder of EREO Creatives">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -69,7 +69,7 @@
 </header>
 		<div id="content" class="inner">
 			<div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title tag">Proxy</h2>
+<h2 class="archive-title">2019</h2>
 
 
   
@@ -92,38 +92,51 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2013-07-19T05:23:46.000Z">Jul 19 2013</time>
+        <time datetime="2019-08-19T18:32:16.000Z">Aug 19 2019</time>
       
       
   
-    <h1 class="title"><a href="/2013/07/using-nodejs-to-redirect-and-proxy-normal-http+websockets-traffic-based-on-hostname.html">Using Node.js to redirect and proxy normal HTTP+WebSocket traffics based on hostnames</a></h1>
+    <h1 class="title"><a href="/2019/08/how-to-survive-a-leadership-vacuum.html">How to survive a leadership vacuum?</a></h1>
   
 
     </header>
     <div class="entry">
       
-        <p>Usually I used to use a single server to host several developing or experimental projects. Thus I need a quick solution to forward different request to these services. I had tried to use <a target="_blank" rel="noopener" href="http://nginx.org/">nginx</a> before. But now I have a easier way to do so.</p>
-<ol>
-<li><p><strong>require modules</strong></p>
+        <h3 id="What-are-leadership-and-a-leadership-vacuum"><a href="#What-are-leadership-and-a-leadership-vacuum" class="headerlink" title="What are leadership and a leadership vacuum?"></a>What are leadership and a leadership vacuum?</h3><p>Leadership is the capacity to inspire, guide, or direct a group of people or an organization toward a result. Typically, a good leader creates a clear vision with goals, then motivates others to share the vision and work to achieve the goals. A leadership vacuum appears when there are no leaders, current leaders are ineffective, or when leaders are locked in battle.</p>
+<h3 id="Is-there-a-leadership-vacuum-in-my-organization"><a href="#Is-there-a-leadership-vacuum-in-my-organization" class="headerlink" title="Is there a leadership vacuum in my organization?"></a>Is there a leadership vacuum in my organization?</h3><p>There might be a leadership vacuum when:</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="http://underscorejs.org/">underscode</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/nodejitsu/node-http-proxy">node-http-proxy</a><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>),</span><br><span class="line">    _ = <span class="built_in">require</span>(<span class="string">&#x27;underscore&#x27;</span>),</span><br><span class="line">    httpProxy = <span class="built_in">require</span>(<span class="string">&#x27;http-proxy&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
+<li>Key people show up late, come down with the flu, miss the flight/bus/train often, etc.</li>
+<li>People work by themselves, with little collaboration (the silo mentality)</li>
+<li>The Directions are weak, vague, wandering or poor</li>
+<li>Groups and their leaders argue each seeks limited resources and a position of higher status and control</li>
+<li>The turnover rate is higher than usual (&gt; 30%)</li>
+<li>In short, people are basically drifting.</li>
 </ul>
-</li>
-<li><p><strong>config proxy(forward) and redirect mappings</strong> (hostname based)</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> proxyOptions = &#123;</span><br><span class="line">  router: &#123;</span><br><span class="line">    <span class="string">&quot;api.testAppX.com&quot;</span>     : <span class="string">&#x27;localhost:2041&#x27;</span>,</span><br><span class="line">    <span class="string">&quot;dev.api.testAppX.com&quot;</span> : <span class="string">&#x27;localhost:2042&#x27;</span>,</span><br><span class="line">    <span class="string">&quot;www.testAppY.com&quot;</span>     : <span class="string">&#x27;localhost:10520&#x27;</span>,</span><br><span class="line">    <span class="string">&quot;test.oldApps.com&quot;</span>     : <span class="string">&#x27;localhost:10520&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;bc.ryanwu.co&#x27;</span>         : <span class="string">&#x27;localhost:8888&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br><span class="line">  redirectOptions = &#123;</span><br><span class="line">    <span class="string">&#x27;olddomain.com&#x27;</span>      : <span class="string">&#x27;http://newdomain.com/&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;www.olddomain.com&#x27;</span>  : <span class="string">&#x27;http://newdomain.com/&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;blog.olddomain.com&#x27;</span> : <span class="string">&#x27;http://newdomain.com/blog/&#x27;</span></span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="What-happens-if-I-do-nothing"><a href="#What-happens-if-I-do-nothing" class="headerlink" title="What happens if I do nothing?"></a>What happens if I do nothing?</h3><blockquote>
+<p>“Employees don’t leave jobs; they leave bosses, especially there’s no boss. Employee satisfaction doesn’t necessarily depend on what we give our employees, but who”.</p>
+</blockquote>
+<p>Leadership vacuums can happen at the country level, within an institution, even <a target="_blank" rel="noopener" href="https://www.jessicadenham.com/dealing-with-stuff/household-leadership-vacuum">households</a>, and can lead to culture damage, even putting businesses out of business.</p>
+<h3 id="How-can-I-survive-a-leadership-vacuum"><a href="#How-can-I-survive-a-leadership-vacuum" class="headerlink" title="How can I survive a leadership vacuum?"></a>How can I survive a leadership vacuum?</h3><p><strong>Be organized and clear</strong>. If you’re a team leader, organize your team by redrawing the boundary of authority and responsibility. Otherwise, your team will act their way out or wait for direction. The longer this takes, the harder it will be to get everyone back on track.</p>
+<p>As an individual, this is also an excellent time to think about your personal goals and see if it matches the team goals. What’s your hidden agenda? Do you want to change the world or a 9 to 5 job that just pays the bills?</p>
+<p><strong>Be decisive and persistent</strong>. A true leader makes timely thoughtful plans to keep the confidence level high in the team. Another approach is to look for innovators who are comfortable with the unknown and can bring in new ideas. Once decided, protect the message and keep moving the organization forward. On the other hand, if you’re waiting for an opportunity to lead, this is the best time to step up and fill the gap.<br>Be transparent and visible. When in chaos, what’s the big picture or the organization? Reaffirming the vision and goals will also reassure the team that everything will be fine. Please invite others to do what they can. It’s a good time to share initiatives and honor contributions.</p>
+<p>This article was originally published on <a target="_blank" rel="noopener" href="https://blog.library.tc.columbia.edu/b/13933-How-to-survive-a-leadership-vacuum">EdLab Blog</a>. Thanks for reading and feel free to share your comments below.</p>
+<h2 id="Related-Resources"><a href="#Related-Resources" class="headerlink" title="Related Resources:"></a>Related Resources:</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.techrepublic.com/blog/cio-in-action/stepping-into-a-leadership-vacuum-shows-initiative/">Stepping into a leadership vacuum shows initiative</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.rapidstartleadership.com/when-no-one-is-in-charge-organize-orient-act/">Surviving a Leadership Vacuum</a></li>
+<li><a target="_blank" rel="noopener" href="http://lifevesting.com/blog/2012/09/11/how-to-step-into-a-leadership-vacuum/">How to Step into a Leadership Vacuum</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.huffpost.com/entry/the-leadership-vacuum_b_801516">The Leadership Vacuum — Make It Your Friend</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.americanexpress.com/en-us/business/trends-and-insights/articles/3-ways-to-avoid-a-leadership-vacuum/">3 Ways to Avoid a Leadership Vacuum</a></li>
+<li><a target="_blank" rel="noopener" href="https://mystudentvoices.com/filling-the-leadership-vacuum-ca0a5fc3834">Filling the leadership vacuum</a></li>
+</ul>
+
       
     </div>
     <footer>
       
         
-          <div class="alignleft">
-            <a href="/2013/07/using-nodejs-to-redirect-and-proxy-normal-http+websockets-traffic-based-on-hostname.html#more" class="more-link">Read More</a>
-          </div>
-        
         
         <div class="comments alignright">
-          <a href="/2013/07/using-nodejs-to-redirect-and-proxy-normal-http+websockets-traffic-based-on-hostname.html#disqus_thread" class="comment-link">Comments</a>
+          <a href="/2019/08/how-to-survive-a-leadership-vacuum.html#disqus_thread" class="comment-link">Comments</a>
         </div>
         
       

@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   
-  <title>《鐵娘子The Iron Lady》筆記 | Ryan Wu</title>
+  <title>Display remote Node.JS service logs on Chrome Console | Ryan Wu</title>
   <meta name="author" content="Ryan Wu">
-  <meta name="description" content="Ryan Wu, Front end JavaScirpt + iOS developer, Co-founder of EREO Creatives">
+  <meta name="description" content="Ryan Wu, JavaScript lover. Full stack JavaScript + iOS developer. Co-founder of EREO Creatives">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:title" content="《鐵娘子The Iron Lady》筆記"/>
+  <meta property="og:title" content="Display remote Node.JS service logs on Chrome Console"/>
   <meta property="og:site_name" content="Ryan Wu"/>
   <meta property="og:image" content="http://www.ereo-creatives.com/img/team/img-1.png"/>
   
@@ -36,14 +36,14 @@
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css" />
 
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 
 <body>
 	<div id="page-wrap">
 	<header id="header" class="inner"><div class="alignleft">
 	<h1><a href="/">Ryan Wu</a></h1>
-	<h2>I code to make people live better.</h2>
+	<h2>I code and I know things</h2>
 </div>
 <nav id="main-nav" class="alignright">
 	<ul>
@@ -62,8 +62,6 @@
 		<li class="menuItem"><a href="/archives">Archives</a></li>
 		
 		<li class="menuItem"><a href="/about">About</a></li>
-		
-		<li class="menuItem"><a href="http://zhblog.ryanwu.me">中文博客</a></li>
 		
 	</ul>
 	<div class="clearfix"></div>
@@ -90,45 +88,37 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2012-03-07T04:28:01.000Z">Mar 06 2012</time>
+        <time datetime="2013-06-25T16:24:03.000Z">Jun 25 2013</time>
       
       
   
-    <h1 class="title">《鐵娘子The Iron Lady》筆記</h1>
+    <h1 class="title">Display remote Node.JS service logs on Chrome Console</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>這篇文章我從Twitter 打到 Tumblr, 從Tumblr 打到 Blogger</p>
-<p><em>昨天才看完電影，今天全憑記憶打，不知不覺就打了好多，部分英文可能有錯就不要太在意了</em></p>
-<p>教育相關</p>
+        <p>In recent years, we got plenty of <a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Platform_as_a_service">PaaS</a> services which provide very simple and easy way to deploy our&nbsp;Node.JS services.</p>
+<p>Usually after deploying my service, I have to use the command line tools or visit some very slow web pages to access the server logs. It’s really waste my time.</p>
+<p>But today, I want to introduce a tool, <strong><a target="_blank" rel="noopener" href="http://craig.is/writing/chrome-logger">Chrome Logger</a>, </strong>it provides a way to <strong><span style="color: #e69138;">display server logs into Chrome Developer Tool’s Console.</span></strong></p>
+<p><a href="/images/20130625_test1.png"><img src="/images/20130625_test1.png" alt=""></a></p>
+<p><a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/chromephp/noaneddfkdjfnfdakjjmocngnfkfehhd">Install it</a>,&nbsp;then&nbsp;visit my <a target="_blank" rel="noopener" href="http://chromelogger.herokuapp.com/">sample project on Heroku</a>&nbsp;to see what’s going on.</p>
+<p><a href="/images/20130625_test1.png"><img src="/images/20130625_test1.png" alt=""></a></p>
 <ul>
-<li>我們要不堅持立場，要不乾脆一事無成<br>(We will stand on principle, or we will not stand at all)</li>
-<li>過去人們總是努力要完成某件事，現在卻是要努力成為某個人<br>(It used to be about trying to do something, Now it’s about trying to be someone)</li>
-<li><p>如果父母總是要求孩子跟自己走一樣的路，那要怎麼要求孩子更傑出?<br>&gt; 教育是適性發展，不是要跟隨前人腳步<br>政治相關</p>
-</li>
-<li><p>以前政治是關於如何做事，現在是關於如何出名</p>
-</li>
-<li>我們想要一個人民可以自由的選擇、犯錯、持有寬容及同情心的社會。這就是我們所謂的道德社會；不是一個國家要負所有責任，而沒有人須要為國家負責的社會。</li>
-<li>假裝我們都是平等的沒有任何好處，我們並不是相同的，從來沒有過，也永遠不會是</li>
-<li>人們已經不思考了,他們全憑感覺。一下說我覺得不妥，一下子又說抱歉我們組織覺得如何如何。<br>當代最重大的問題之一就是我們被這樣一群人所統治</li>
+<li>Sample Test Project on Github</li>
 </ul>
-<p>&gt; 一個領導人不能只靠”感覺”，要理性地去思考每一步策略.*   那些人不是無能，就是懦弱&gt; 這是鐵娘子教女兒開車時的話，其實正是暗指當時政客們的狀況</p>
+<p><strong>Update 06/25 00:40:</strong></p>
 <ul>
-<li>總有人應該面對問題，說出難聽的真相! (對政客說) 你們這些人膽子太小了</li>
-<li><p>In politics, If you want anything said, ask a man; If you want anything done, ask a woman<br>人生相關</p>
+<li>If you’re using <a target="_blank" rel="noopener" href="http://expressjs.com/">ExpressJS</a>, you can simple log your error like following error handling middleware<script src="//gist.github.com/66d5ac94916c6ab0a545.js"></script>
 </li>
-<li><p>生活本來就是自由選擇</p>
-</li>
-<li>思想會化成語言，語言會化成行動，行動會變成習慣，習慣會變成個性，而個性會決定命運！<br>我們想甚麼，就會造就自己成為什麼樣的人<br>(Watch your thoughts for they become words. Watch your words for they become actions. Watch your actions for they become… habits. Watch your habits, for they become your character. And watch your character, for it becomes your destiny! What we think we become.)</li>
-<li>小心你想些什麼，因為它們會從你口中溜出來<br>(Watch your thoughts for they become words)</li>
-<li>你想改變這個國家(團體/公司)，就去領導它<br>(If you want to change the party, lead it. If you want to change the country, lead it.)<br>&gt; 要堅定立場，做出自己的風格. 還記得某個網路圈的名人曾在FB上說過，如果你不喜歡你的(公司)環境，不是該抱怨，而是該改造它(然後我就按讚)</li>
 </ul>
-<p>最後一句看似簡單但卻意義非凡的話</p>
-<p><span style="font-size: medium;">One’s life must mean more than that.</span> </p>
-<p>正適合送給所有正在為自己理性/夢想打拼的人</p>
-<p>加油!</p>
+<p><strong>Update 06/25 01:50:</strong></p>
+<ul>
+<li>After reading the <a target="_blank" rel="noopener" href="http://devtoolsecrets.com/">Secret of Browser Developer Tool</a>. I updated ChromeLogger(<a target="_blank" rel="noopener" href="https://github.com/ryanhanwu/chromelogger">my forked repo</a>) and express-chrome-logger(<a target="_blank" rel="noopener" href="https://github.com/ryanhanwu/express-chrome-logger">my forked repo</a>). Now it supports&nbsp;<strong>TABLE display</strong></li>
+</ul>
+<p><a href="/images/20130625_test2.png"><img src="/images/20130625_test2.png" alt=""></a></p>
+<p>Pull requests sent :&nbsp;<a target="_blank" rel="noopener" href="https://github.com/ccampbell/chromelogger/pull/24">chromelogger</a>&nbsp;&amp;&nbsp;<a target="_blank" rel="noopener" href="https://github.com/olahol/express-chrome-logger/pull/1">express-chrome-logger</a>.</p>
+<p>Good luck to myself.</p>
 
       
     </div>
@@ -138,13 +128,13 @@
           
   
   <div class="categories">
-    <a href="/categories/Thinking/">Thinking</a>
+    <a href="/categories/Tools/">Tools</a>
   </div>
 
           
   
   <div class="tags">
-    <a class="tag" href="/tags/Movie/">Movie</a>
+    <a class="tag" href="/tags/js/">JavaScript</a>, <a class="tag" href="/tags/Node-js/">Node.js</a>
   </div>
 
           
@@ -175,7 +165,7 @@
 <section id="comment">
   <h1 class="title">Comments</h1>
   <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
 </section>
 </div></div>
@@ -188,20 +178,16 @@
 </div>
 
   <div class="widget gravatar">
-    <div class="entry">
-        Halo, This is <strong>Ryan Wu</strong> from Taiwan.
-    </div>
-    
     <div class="gravatar-wrap">
       <a href="/about/">
-        <img class="gravatar-img" src="https://www.gravatar.com/avatar/598af4e5c82136268d9009571be31026?s=150" alt="Ryan Wu">    
+        <img class="gravatar-img" src="https://www.ereo-creatives.com/img/team/img-1.png" alt="Ryan Wu">
       </a>
       
-      <a href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
+      <a target="_blank" rel="noopener" href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       
     </div>
-    
+
 </div>
 
   
@@ -244,7 +230,7 @@
   
   Ryan Wu - <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>
   
-  <p>It's all yours under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
+  <p>It's all yours under <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
 </div>
 <div class="clearfix"></div>
 </footer>

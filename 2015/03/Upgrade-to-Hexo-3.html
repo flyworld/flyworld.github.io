@@ -5,7 +5,7 @@
   
   <title>Upgrade to Hexo 3 | Ryan Wu</title>
   <meta name="author" content="Ryan Wu">
-  <meta name="description" content="Ryan Wu, Front end JavaScirpt + iOS developer, Co-founder of EREO Creatives">
+  <meta name="description" content="Ryan Wu, JavaScript lover. Full stack JavaScript + iOS developer. Co-founder of EREO Creatives">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:title" content="Upgrade to Hexo 3"/>
   <meta property="og:site_name" content="Ryan Wu"/>
@@ -36,14 +36,14 @@
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css" />
 
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 
 <body>
 	<div id="page-wrap">
 	<header id="header" class="inner"><div class="alignleft">
 	<h1><a href="/">Ryan Wu</a></h1>
-	<h2>I code to make people live better.</h2>
+	<h2>I code and I know things</h2>
 </div>
 <nav id="main-nav" class="alignright">
 	<ul>
@@ -62,8 +62,6 @@
 		<li class="menuItem"><a href="/archives">Archives</a></li>
 		
 		<li class="menuItem"><a href="/about">About</a></li>
-		
-		<li class="menuItem"><a href="http://zhblog.ryanwu.me">中文博客</a></li>
 		
 	</ul>
 	<div class="clearfix"></div>
@@ -100,28 +98,17 @@
     </header>
     <div class="entry">
       
-        <p>I’ve use <a href="http://hexo.io" target="_blank" rel="noopener">Hexo</a> for a while and deply my blog on Github. Upgrade to Hexo 3 is extremely simple.</p>
+        <p>I’ve use <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a> for a while and deply my blog on Github. Upgrade to Hexo 3 is extremely simple.</p>
 <ol>
-<li><p>Upgrade Hexo command line tool</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Update your package.json</p>
-<ul>
-<li><p>Basically replace old dependencies</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">   <span class="string">"dependencies"</span>: &#123;</span><br><span class="line">-    <span class="string">"hexo-renderer-ejs"</span>: <span class="string">"*"</span>,</span><br><span class="line">-    <span class="string">"hexo-renderer-stylus"</span>: <span class="string">"*"</span>,</span><br><span class="line">-    <span class="string">"hexo-renderer-marked"</span>: <span class="string">"*"</span></span><br><span class="line">+    <span class="string">"hexo"</span>: <span class="string">"^3.0.0"</span>,</span><br><span class="line">+    <span class="string">"hexo-generator-archive"</span>: <span class="string">"^0.1.0"</span>,</span><br><span class="line">+    <span class="string">"hexo-generator-category"</span>: <span class="string">"^0.1.0"</span>,</span><br><span class="line">+    <span class="string">"hexo-generator-index"</span>: <span class="string">"^0.1.0"</span>,</span><br><span class="line">+    <span class="string">"hexo-generator-tag"</span>: <span class="string">"^0.1.0"</span>,</span><br><span class="line">+    <span class="string">"hexo-renderer-ejs"</span>: <span class="string">"^0.1.0"</span>,</span><br><span class="line">+    <span class="string">"hexo-renderer-marked"</span>: <span class="string">"^0.2.4"</span>,</span><br><span class="line">+    <span class="string">"hexo-renderer-stylus"</span>: <span class="string">"^0.2.0"</span>,</span><br><span class="line">+    <span class="string">"hexo-server"</span>: <span class="string">"^0.1.2"</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Add Hexo version <strong>This step is very important, your hexo cli wont work if you didn’t add this</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="string">"hexo"</span> : &#123;</span><br><span class="line">    <span class="string">"version"</span> : <span class="number">3.0</span><span class="number">.0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<li>Upgrade Hexo command line tool<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-cli -g</span></span><br></pre></td></tr></table></figure></li>
+<li>Update your package.json<ul>
+<li>Basically replace old dependencies<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">   <span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">-    <span class="string">&quot;hexo-renderer-ejs&quot;</span>: <span class="string">&quot;*&quot;</span>,</span><br><span class="line">-    <span class="string">&quot;hexo-renderer-stylus&quot;</span>: <span class="string">&quot;*&quot;</span>,</span><br><span class="line">-    <span class="string">&quot;hexo-renderer-marked&quot;</span>: <span class="string">&quot;*&quot;</span></span><br><span class="line">+    <span class="string">&quot;hexo&quot;</span>: <span class="string">&quot;^3.0.0&quot;</span>,</span><br><span class="line">+    <span class="string">&quot;hexo-generator-archive&quot;</span>: <span class="string">&quot;^0.1.0&quot;</span>,</span><br><span class="line">+    <span class="string">&quot;hexo-generator-category&quot;</span>: <span class="string">&quot;^0.1.0&quot;</span>,</span><br><span class="line">+    <span class="string">&quot;hexo-generator-index&quot;</span>: <span class="string">&quot;^0.1.0&quot;</span>,</span><br><span class="line">+    <span class="string">&quot;hexo-generator-tag&quot;</span>: <span class="string">&quot;^0.1.0&quot;</span>,</span><br><span class="line">+    <span class="string">&quot;hexo-renderer-ejs&quot;</span>: <span class="string">&quot;^0.1.0&quot;</span>,</span><br><span class="line">+    <span class="string">&quot;hexo-renderer-marked&quot;</span>: <span class="string">&quot;^0.2.4&quot;</span>,</span><br><span class="line">+    <span class="string">&quot;hexo-renderer-stylus&quot;</span>: <span class="string">&quot;^0.2.0&quot;</span>,</span><br><span class="line">+    <span class="string">&quot;hexo-server&quot;</span>: <span class="string">&quot;^0.1.2&quot;</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></li>
+<li>Add Hexo version <strong>This step is very important, your hexo cli wont work if you didn’t add this</strong><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;hexo&quot;</span> : &#123;</span><br><span class="line">    <span class="string">&quot;version&quot;</span> : <span class="number">3.0</span><span class="number">.0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li><p>Update deployer settings</p>
-<ul>
-<li><p>Install deployer first</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span> npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Update deployer config</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">-  type: github</span><br><span class="line">-  repository: git@github.com:ryanhanwu/ryanhanwu.github.io.git</span><br><span class="line">+  type: git</span><br><span class="line">+  repo: git@github.com:ryanhanwu/ryanhanwu.github.io.git</span><br></pre></td></tr></table></figure>
+<li>Update deployer settings<ul>
+<li>Install deployer first<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-deployer-git --save</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>Update deployer config<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">-  type: github</span><br><span class="line">-  repository: git@github.com:ryanhanwu/ryanhanwu.github.io.git</span><br><span class="line">+  type: git</span><br><span class="line">+  repo: git@github.com:ryanhanwu/ryanhanwu.github.io.git</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -163,7 +150,7 @@
 <section id="comment">
   <h1 class="title">Comments</h1>
   <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
 </section>
 </div></div>
@@ -176,20 +163,16 @@
 </div>
 
   <div class="widget gravatar">
-    <div class="entry">
-        Halo, This is <strong>Ryan Wu</strong> from Taiwan.
-    </div>
-    
     <div class="gravatar-wrap">
       <a href="/about/">
-        <img class="gravatar-img" src="https://www.gravatar.com/avatar/598af4e5c82136268d9009571be31026?s=150" alt="Ryan Wu">    
+        <img class="gravatar-img" src="https://www.ereo-creatives.com/img/team/img-1.png" alt="Ryan Wu">
       </a>
       
-      <a href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
+      <a target="_blank" rel="noopener" href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       
     </div>
-    
+
 </div>
 
   
@@ -232,7 +215,7 @@
   
   Ryan Wu - <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>
   
-  <p>It's all yours under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
+  <p>It's all yours under <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
 </div>
 <div class="clearfix"></div>
 </footer>

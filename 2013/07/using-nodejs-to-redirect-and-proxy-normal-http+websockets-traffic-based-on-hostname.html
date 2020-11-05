@@ -5,7 +5,7 @@
   
   <title>Using Node.js to redirect and proxy normal HTTP+WebSocket traffics based on hostnames | Ryan Wu</title>
   <meta name="author" content="Ryan Wu">
-  <meta name="description" content="Ryan Wu, Front end JavaScirpt + iOS developer, Co-founder of EREO Creatives">
+  <meta name="description" content="Ryan Wu, JavaScript lover. Full stack JavaScript + iOS developer. Co-founder of EREO Creatives">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:title" content="Using Node.js to redirect and proxy normal HTTP+WebSocket traffics based on hostnames"/>
   <meta property="og:site_name" content="Ryan Wu"/>
@@ -36,14 +36,14 @@
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css" />
 
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 
 <body>
 	<div id="page-wrap">
 	<header id="header" class="inner"><div class="alignleft">
 	<h1><a href="/">Ryan Wu</a></h1>
-	<h2>I code to make people live better.</h2>
+	<h2>I code and I know things</h2>
 </div>
 <nav id="main-nav" class="alignright">
 	<ul>
@@ -62,8 +62,6 @@
 		<li class="menuItem"><a href="/archives">Archives</a></li>
 		
 		<li class="menuItem"><a href="/about">About</a></li>
-		
-		<li class="menuItem"><a href="http://zhblog.ryanwu.me">中文博客</a></li>
 		
 	</ul>
 	<div class="clearfix"></div>
@@ -100,38 +98,35 @@
     </header>
     <div class="entry">
       
-        <p>Usually I used to use a single server to host several developing or experimental projects. Thus I need a quick solution to forward different request to these services. I had tried to use <a href="http://nginx.org/" target="_blank" rel="noopener">nginx</a> before. But now I have a easier way to do so.</p>
+        <p>Usually I used to use a single server to host several developing or experimental projects. Thus I need a quick solution to forward different request to these services. I had tried to use <a target="_blank" rel="noopener" href="http://nginx.org/">nginx</a> before. But now I have a easier way to do so.</p>
 <ol>
 <li><p><strong>require modules</strong></p>
 <ul>
-<li><a href="http://underscorejs.org/" target="_blank" rel="noopener">underscode</a></li>
-<li><a href="https://github.com/nodejitsu/node-http-proxy" target="_blank" rel="noopener">node-http-proxy</a><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>),</span><br><span class="line">    _ = <span class="built_in">require</span>(<span class="string">'underscore'</span>),</span><br><span class="line">    httpProxy = <span class="built_in">require</span>(<span class="string">'http-proxy'</span>);</span><br></pre></td></tr></table></figure>
-</li>
+<li><a target="_blank" rel="noopener" href="http://underscorejs.org/">underscode</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/nodejitsu/node-http-proxy">node-http-proxy</a><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>),</span><br><span class="line">    _ = <span class="built_in">require</span>(<span class="string">&#x27;underscore&#x27;</span>),</span><br><span class="line">    httpProxy = <span class="built_in">require</span>(<span class="string">&#x27;http-proxy&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p><strong>config proxy(forward) and redirect mappings</strong> (hostname based)</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> proxyOptions = &#123;</span><br><span class="line">  router: &#123;</span><br><span class="line">    <span class="string">"api.testAppX.com"</span>     : <span class="string">'localhost:2041'</span>,</span><br><span class="line">    <span class="string">"dev.api.testAppX.com"</span> : <span class="string">'localhost:2042'</span>,</span><br><span class="line">    <span class="string">"www.testAppY.com"</span>     : <span class="string">'localhost:10520'</span>,</span><br><span class="line">    <span class="string">"test.oldApps.com"</span>     : <span class="string">'localhost:10520'</span>,</span><br><span class="line">    <span class="string">'bc.ryanwu.co'</span>         : <span class="string">'localhost:8888'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br><span class="line">  redirectOptions = &#123;</span><br><span class="line">    <span class="string">'olddomain.com'</span>      : <span class="string">'http://newdomain.com/'</span>,</span><br><span class="line">    <span class="string">'www.olddomain.com'</span>  : <span class="string">'http://newdomain.com/'</span>,</span><br><span class="line">    <span class="string">'blog.olddomain.com'</span> : <span class="string">'http://newdomain.com/blog/'</span></span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> proxyOptions = &#123;</span><br><span class="line">  router: &#123;</span><br><span class="line">    <span class="string">&quot;api.testAppX.com&quot;</span>     : <span class="string">&#x27;localhost:2041&#x27;</span>,</span><br><span class="line">    <span class="string">&quot;dev.api.testAppX.com&quot;</span> : <span class="string">&#x27;localhost:2042&#x27;</span>,</span><br><span class="line">    <span class="string">&quot;www.testAppY.com&quot;</span>     : <span class="string">&#x27;localhost:10520&#x27;</span>,</span><br><span class="line">    <span class="string">&quot;test.oldApps.com&quot;</span>     : <span class="string">&#x27;localhost:10520&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;bc.ryanwu.co&#x27;</span>         : <span class="string">&#x27;localhost:8888&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br><span class="line">  redirectOptions = &#123;</span><br><span class="line">    <span class="string">&#x27;olddomain.com&#x27;</span>      : <span class="string">&#x27;http://newdomain.com/&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;www.olddomain.com&#x27;</span>  : <span class="string">&#x27;http://newdomain.com/&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;blog.olddomain.com&#x27;</span> : <span class="string">&#x27;http://newdomain.com/blog/&#x27;</span></span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<ol>
+</li>
 <li><p><strong>Create an instance of node-http-proxy’s RoutingProxy</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> proxy = <span class="keyword">new</span> httpProxy.RoutingProxy(proxyOptions);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>Proxy normal HTTP requests</strong></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> server = http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> oriHost = req.headers.host,</span><br><span class="line">        <span class="comment">//remove port number from original host</span></span><br><span class="line">        host = oriHost.indexOf(<span class="string">":"</span>) ? oriHost.split(<span class="string">':'</span>)[<span class="number">0</span>] : oriHost;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//Check matches of redirect hostnames</span></span><br><span class="line">  <span class="keyword">if</span>(_.has(redirectOptions, host)) &#123;</span><br><span class="line">    res.writeHead(<span class="number">301</span>, &#123; <span class="comment">//You can use 301, 302 or whatever status code</span></span><br><span class="line">      <span class="string">'Location'</span>: redirectOptions[host],</span><br><span class="line">      <span class="string">'Expires'</span>: (<span class="keyword">new</span> <span class="built_in">Date</span>()).toGMTString()</span><br><span class="line">    &#125;);</span><br><span class="line">    res.end();</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">//Routing proxy will handle the rest of requests</span></span><br><span class="line">    proxy.proxyRequest(req, res);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> server = http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> oriHost = req.headers.host,</span><br><span class="line">        <span class="comment">//remove port number from original host</span></span><br><span class="line">        host = oriHost.indexOf(<span class="string">&quot;:&quot;</span>) ? oriHost.split(<span class="string">&#x27;:&#x27;</span>)[<span class="number">0</span>] : oriHost;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//Check matches of redirect hostnames</span></span><br><span class="line">  <span class="function"><span class="title">if</span>(<span class="params">_.has(redirectOptions, host)</span>)</span> &#123;</span><br><span class="line">    res.writeHead(<span class="number">301</span>, &#123; <span class="comment">//You can use 301, 302 or whatever status code</span></span><br><span class="line">      <span class="string">&#x27;Location&#x27;</span>: redirectOptions[host],</span><br><span class="line">      <span class="string">&#x27;Expires&#x27;</span>: (<span class="keyword">new</span> <span class="built_in">Date</span>()).toGMTString()</span><br><span class="line">    &#125;);</span><br><span class="line">    res.end();</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">//Routing proxy will handle the rest of requests</span></span><br><span class="line">    proxy.proxyRequest(req, res);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>Proxy websocket requests and listen the main service on specific port</strong></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">server.on(<span class="string">'upgrade'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, socket, head</span>) </span>&#123;</span><br><span class="line">  proxy.proxyWebSocketRequest(req, socket, head);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.listen(<span class="number">80</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">server.on(<span class="string">&#x27;upgrade&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, socket, head</span>) </span>&#123;</span><br><span class="line">  proxy.proxyWebSocketRequest(req, socket, head);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.listen(<span class="number">80</span>);</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>Its very convenient and then I can use a simple <a href="https://github.com/nodejitsu/forever" target="_blank" rel="noopener">forever</a> service to manage this service.</p>
+<p>Its very convenient and then I can use a simple <a target="_blank" rel="noopener" href="https://github.com/nodejitsu/forever">forever</a> service to manage this service.</p>
 <ul>
-<li><p>Download original JavaScript file on <a href="https://gist.github.com/ryanhanwu/6031480" target="_blank" rel="noopener">here - Gist</a></p>
+<li><p>Download original JavaScript file on <a target="_blank" rel="noopener" href="https://gist.github.com/ryanhanwu/6031480">here - Gist</a></p>
 </li>
 <li><p>Ref:</p>
 <ul>
-<li><a href="https://gist.github.com/konklone/5006662" target="_blank" rel="noopener">node-http-proxy-with-redirects.js</a></li>
+<li><a target="_blank" rel="noopener" href="https://gist.github.com/konklone/5006662">node-http-proxy-with-redirects.js</a></li>
 </ul>
 </li>
 </ul>
@@ -181,7 +176,7 @@
 <section id="comment">
   <h1 class="title">Comments</h1>
   <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
 </section>
 </div></div>
@@ -194,20 +189,16 @@
 </div>
 
   <div class="widget gravatar">
-    <div class="entry">
-        Halo, This is <strong>Ryan Wu</strong> from Taiwan.
-    </div>
-    
     <div class="gravatar-wrap">
       <a href="/about/">
-        <img class="gravatar-img" src="https://www.gravatar.com/avatar/598af4e5c82136268d9009571be31026?s=150" alt="Ryan Wu">    
+        <img class="gravatar-img" src="https://www.ereo-creatives.com/img/team/img-1.png" alt="Ryan Wu">
       </a>
       
-      <a href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
+      <a target="_blank" rel="noopener" href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       
     </div>
-    
+
 </div>
 
   
@@ -250,7 +241,7 @@
   
   Ryan Wu - <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>
   
-  <p>It's all yours under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
+  <p>It's all yours under <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
 </div>
 <div class="clearfix"></div>
 </footer>

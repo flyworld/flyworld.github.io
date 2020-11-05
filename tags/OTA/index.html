@@ -5,7 +5,7 @@
   
   <title>OTA | Ryan Wu</title>
   <meta name="author" content="Ryan Wu">
-  <meta name="description" content="Ryan Wu, Front end JavaScirpt + iOS developer, Co-founder of EREO Creatives">
+  <meta name="description" content="Ryan Wu, JavaScript lover. Full stack JavaScript + iOS developer. Co-founder of EREO Creatives">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:site_name" content="Ryan Wu"/>
   <meta property="og:image" content="http://www.ereo-creatives.com/img/team/img-1.png"/>
@@ -35,14 +35,14 @@
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css" />
 
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 
 <body>
 	<div id="page-wrap">
 	<header id="header" class="inner"><div class="alignleft">
 	<h1><a href="/">Ryan Wu</a></h1>
-	<h2>I code to make people live better.</h2>
+	<h2>I code and I know things</h2>
 </div>
 <nav id="main-nav" class="alignright">
 	<ul>
@@ -61,8 +61,6 @@
 		<li class="menuItem"><a href="/archives">Archives</a></li>
 		
 		<li class="menuItem"><a href="/about">About</a></li>
-		
-		<li class="menuItem"><a href="http://zhblog.ryanwu.me">中文博客</a></li>
 		
 	</ul>
 	<div class="clearfix"></div>
@@ -104,17 +102,17 @@
     </header>
     <div class="entry">
       
-        <p>We all know that Apple provides an <a href="http://help.apple.com/iosdeployment-apps/mac/1.1/#app43ad871e" target="_blank" rel="noopener">easy way</a>(OTA - Over The Air) to distribute your in-house application through a simple web link like following.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;a href=&quot;itms-services://?action=download-manifest&amp;url=http://example.com/maniifest.plist&quot;&gt;Install App&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+        <p>We all know that Apple provides an <a target="_blank" rel="noopener" href="http://help.apple.com/iosdeployment-apps/mac/1.1/#app43ad871e">easy way</a>(OTA - Over The Air) to distribute your in-house application through a simple web link like following.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;a href&#x3D;&quot;itms-services:&#x2F;&#x2F;?action&#x3D;download-manifest&amp;url&#x3D;http:&#x2F;&#x2F;example.com&#x2F;maniifest.plist&quot;&gt;Install App&lt;&#x2F;a&gt; </span><br></pre></td></tr></table></figure>
 <p>Sure, we can use the same way to update the app.&nbsp;That means we have to send a email or url to our device owner, then they can click it. But in my case, we serve some people who are very busy. Thus we need a faster to update the app.</p>
 <p><span style="font-size: large;"><strong>Usage :&nbsp;</strong></span><br>Simply One Tap on the <strong>AutoUpdate Icon</strong></p>
-<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-Y6MaFg8weKQ/UIrZz5yOnCI/AAAAAAAACe4/j973qStJTX0/s1600/p1.png" target="_blank" rel="noopener"><img src="http://1.bp.blogspot.com/-Y6MaFg8weKQ/UIrZz5yOnCI/AAAAAAAACe4/j973qStJTX0/s1600/p1.png" alt=""></a></div><strong>
-</strong><br>Then the browser will show up and ask you to update the app<br><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-uJnluXhnT0s/UIrZ7M0pFDI/AAAAAAAACfA/jdnBUhJE5pQ/s1600/p2.PNG" target="_blank" rel="noopener"><img src="http://2.bp.blogspot.com/-uJnluXhnT0s/UIrZ7M0pFDI/AAAAAAAACfA/jdnBUhJE5pQ/s640/p2.PNG" alt=""></a></div>
+<div class="separator" style="clear: both; text-align: center;"><a target="_blank" rel="noopener" href="http://1.bp.blogspot.com/-Y6MaFg8weKQ/UIrZz5yOnCI/AAAAAAAACe4/j973qStJTX0/s1600/p1.png"><img src="http://1.bp.blogspot.com/-Y6MaFg8weKQ/UIrZz5yOnCI/AAAAAAAACe4/j973qStJTX0/s1600/p1.png" alt=""></a></div><strong>
+</strong><br>Then the browser will show up and ask you to update the app<br><div class="separator" style="clear: both; text-align: center;"><a target="_blank" rel="noopener" href="http://2.bp.blogspot.com/-uJnluXhnT0s/UIrZ7M0pFDI/AAAAAAAACfA/jdnBUhJE5pQ/s1600/p2.PNG"><img src="http://2.bp.blogspot.com/-uJnluXhnT0s/UIrZ7M0pFDI/AAAAAAAACfA/jdnBUhJE5pQ/s640/p2.PNG" alt=""></a></div>
 
 <p><strong><span style="font-size: large;">How to :&nbsp;</span></strong><br>1. Create a html file with following code</p>
 <p><script src="https://gist.github.com/3951519.js?file=ota-test.html"></script> 2. Add it to the home screen.</p>
-<p><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-V05YdZ0HGiw/UIkFXXCqJpI/AAAAAAAACcE/IPOoyKHyVME/s1600/p3.png" target="_blank" rel="noopener"><img src="http://4.bp.blogspot.com/-V05YdZ0HGiw/UIkFXXCqJpI/AAAAAAAACcE/IPOoyKHyVME/s320/p3.png" alt=""></a></div><div class="separator" style="clear: both; text-align: left;">Remember to update the <a href="http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html" target="_blank" rel="noopener">apple-touch-icon</a> link&nbsp;</div><br><strong><span style="font-size: large;">Demo:</span></strong><br>Use you iOS device browser :&nbsp;<a href="http://goo.gl/HNJuV" target="_blank" rel="noopener">http://goo.gl/HNJuV</a></p>
-<p><strong><span style="font-size: large;">Download:</span></strong><br><a href="https://dl.dropbox.com/u/15540367/Forever/ota-test.zip" target="_blank" rel="noopener">ota-test.zip</a> - This zip include the sample app-touch-icon, sample-plist, and sample html.</p>
+<p><div class="separator" style="clear: both; text-align: center;"><a target="_blank" rel="noopener" href="http://4.bp.blogspot.com/-V05YdZ0HGiw/UIkFXXCqJpI/AAAAAAAACcE/IPOoyKHyVME/s1600/p3.png"><img src="http://4.bp.blogspot.com/-V05YdZ0HGiw/UIkFXXCqJpI/AAAAAAAACcE/IPOoyKHyVME/s320/p3.png" alt=""></a></div><div class="separator" style="clear: both; text-align: left;">Remember to update the <a target="_blank" rel="noopener" href="http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">apple-touch-icon</a> link&nbsp;</div><br><strong><span style="font-size: large;">Demo:</span></strong><br>Use you iOS device browser :&nbsp;<a target="_blank" rel="noopener" href="http://goo.gl/HNJuV">http://goo.gl/HNJuV</a></p>
+<p><strong><span style="font-size: large;">Download:</span></strong><br><a target="_blank" rel="noopener" href="https://dl.dropbox.com/u/15540367/Forever/ota-test.zip">ota-test.zip</a> - This zip include the sample app-touch-icon, sample-plist, and sample html.</p>
 <p><strong>
 </strong></p>
 
@@ -151,20 +149,16 @@
 </div>
 
   <div class="widget gravatar">
-    <div class="entry">
-        Halo, This is <strong>Ryan Wu</strong> from Taiwan.
-    </div>
-    
     <div class="gravatar-wrap">
       <a href="/about/">
-        <img class="gravatar-img" src="https://www.gravatar.com/avatar/598af4e5c82136268d9009571be31026?s=150" alt="Ryan Wu">    
+        <img class="gravatar-img" src="https://www.ereo-creatives.com/img/team/img-1.png" alt="Ryan Wu">
       </a>
       
-      <a href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
+      <a target="_blank" rel="noopener" href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       
     </div>
-    
+
 </div>
 
   
@@ -207,7 +201,7 @@
   
   Ryan Wu - <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>
   
-  <p>It's all yours under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
+  <p>It's all yours under <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
 </div>
 <div class="clearfix"></div>
 </footer>

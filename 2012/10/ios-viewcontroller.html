@@ -5,7 +5,7 @@
   
   <title>在ViewController 之間傳值 | Ryan Wu</title>
   <meta name="author" content="Ryan Wu">
-  <meta name="description" content="Ryan Wu, Front end JavaScirpt + iOS developer, Co-founder of EREO Creatives">
+  <meta name="description" content="Ryan Wu, JavaScript lover. Full stack JavaScript + iOS developer. Co-founder of EREO Creatives">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:title" content="在ViewController 之間傳值"/>
   <meta property="og:site_name" content="Ryan Wu"/>
@@ -36,14 +36,14 @@
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css" />
 
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 
 <body>
 	<div id="page-wrap">
 	<header id="header" class="inner"><div class="alignleft">
 	<h1><a href="/">Ryan Wu</a></h1>
-	<h2>I code to make people live better.</h2>
+	<h2>I code and I know things</h2>
 </div>
 <nav id="main-nav" class="alignright">
 	<ul>
@@ -62,8 +62,6 @@
 		<li class="menuItem"><a href="/archives">Archives</a></li>
 		
 		<li class="menuItem"><a href="/about">About</a></li>
-		
-		<li class="menuItem"><a href="http://zhblog.ryanwu.me">中文博客</a></li>
 		
 	</ul>
 	<div class="clearfix"></div>
@@ -106,7 +104,7 @@
 <p><strong>“怎麼在兩個ViewController之間傳遞資訊”</strong>這篇文章中我列出了幾種常見的方法，提供給大家做參考。</p>
 </blockquote>
 <p><strong><span style="font-size: large;">1. 透過實體(Instance)傳遞資訊</span></strong></p>
-<p><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-ocnOnGCizSQ/UGvhI2puHwI/AAAAAAAACTs/xUYMOv9FN9Y/s1600/blog1-1.png" target="_blank" rel="noopener"><img src="http://1.bp.blogspot.com/-ocnOnGCizSQ/UGvhI2puHwI/AAAAAAAACTs/xUYMOv9FN9Y/s640/blog1-1.png" alt=""></a></div>我們都知道，每一個ViewController 的類別(Class)，不管是用Storyboard還是Nib的方式，都要先初始化(alloc + init)，然後再透過這些<strong>實體(Instance)</strong>物件做操作。所以，要在彼此之間傳遞資訊，必須要取得這些<strong>實體</strong>。</p>
+<p><div class="separator" style="clear: both; text-align: center;"><a target="_blank" rel="noopener" href="http://1.bp.blogspot.com/-ocnOnGCizSQ/UGvhI2puHwI/AAAAAAAACTs/xUYMOv9FN9Y/s1600/blog1-1.png"><img src="http://1.bp.blogspot.com/-ocnOnGCizSQ/UGvhI2puHwI/AAAAAAAACTs/xUYMOv9FN9Y/s640/blog1-1.png" alt=""></a></div>我們都知道，每一個ViewController 的類別(Class)，不管是用Storyboard還是Nib的方式，都要先初始化(alloc + init)，然後再透過這些<strong>實體(Instance)</strong>物件做操作。所以，要在彼此之間傳遞資訊，必須要取得這些<strong>實體</strong>。</p>
 <p>如果傳遞的資訊比較簡單，或是傳遞資訊的動作只有一次的時候，透過物件的實體是比較簡單的方式</p>
 <h4 id="範例A：-透過-Nib-的方式，取得ViewController2-的實體，傳遞資訊，指定user的值"><a href="#範例A：-透過-Nib-的方式，取得ViewController2-的實體，傳遞資訊，指定user的值" class="headerlink" title="範例A： 透過 Nib 的方式，取得ViewController2 的實體，傳遞資訊，指定user的值"></a>範例A： 透過 Nib 的方式，取得ViewController2 的實體，傳遞資訊，指定user的值</h4><script src="https://gist.github.com/3825488.js?file=ViewController1.m"></script> 
 
@@ -162,7 +160,7 @@
 <section id="comment">
   <h1 class="title">Comments</h1>
   <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
 </section>
 </div></div>
@@ -175,20 +173,16 @@
 </div>
 
   <div class="widget gravatar">
-    <div class="entry">
-        Halo, This is <strong>Ryan Wu</strong> from Taiwan.
-    </div>
-    
     <div class="gravatar-wrap">
       <a href="/about/">
-        <img class="gravatar-img" src="https://www.gravatar.com/avatar/598af4e5c82136268d9009571be31026?s=150" alt="Ryan Wu">    
+        <img class="gravatar-img" src="https://www.ereo-creatives.com/img/team/img-1.png" alt="Ryan Wu">
       </a>
       
-      <a href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
+      <a target="_blank" rel="noopener" href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       
     </div>
-    
+
 </div>
 
   
@@ -231,7 +225,7 @@
   
   Ryan Wu - <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>
   
-  <p>It's all yours under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
+  <p>It's all yours under <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
 </div>
 <div class="clearfix"></div>
 </footer>

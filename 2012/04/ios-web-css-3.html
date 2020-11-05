@@ -5,7 +5,7 @@
   
   <title>iOS Web 畫面閃爍問題 (CSS3) | Ryan Wu</title>
   <meta name="author" content="Ryan Wu">
-  <meta name="description" content="Ryan Wu, Front end JavaScirpt + iOS developer, Co-founder of EREO Creatives">
+  <meta name="description" content="Ryan Wu, JavaScript lover. Full stack JavaScript + iOS developer. Co-founder of EREO Creatives">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:title" content="iOS Web 畫面閃爍問題 (CSS3)"/>
   <meta property="og:site_name" content="Ryan Wu"/>
@@ -36,14 +36,14 @@
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css" />
 
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 
 <body>
 	<div id="page-wrap">
 	<header id="header" class="inner"><div class="alignleft">
 	<h1><a href="/">Ryan Wu</a></h1>
-	<h2>I code to make people live better.</h2>
+	<h2>I code and I know things</h2>
 </div>
 <nav id="main-nav" class="alignright">
 	<ul>
@@ -62,8 +62,6 @@
 		<li class="menuItem"><a href="/archives">Archives</a></li>
 		
 		<li class="menuItem"><a href="/about">About</a></li>
-		
-		<li class="menuItem"><a href="http://zhblog.ryanwu.me">中文博客</a></li>
 		
 	</ul>
 	<div class="clearfix"></div>
@@ -106,16 +104,16 @@
 <pre><code>就在這個更改子節點的瞬間 iOS 的畫面一定會**&lt;span style=&quot;color: red;&quot;&gt;閃爍一下&lt;/span&gt;** ``測試過了 iPad / iP4s / iPod Touch 都有這問題 但是Android 2.x 4.x 都沒有…
 </code></pre><p><strong><span style="font-size: large;">處理方式</span></strong></p>
 <p>原本以為是iOS 的 webkit 在處理特定 position 的 left 造成子節點重畫的問題，<br>後來想想覺得這 <span style="color: blue;"><strike>也太基本了吧</strike> </span><span style="color: black;">不太可能，經過嘗試以及搜尋，發現很多人都有類似問題。</span></p>
-<p><span style="color: black;"> 像是StackOverflow <a href="http://stackoverflow.com/questions/6564911/webkit-translate3d-issues-peek-thru" target="_blank" rel="noopener">這篇</a> 還有 <a href="http://stackoverflow.com/questions/6481894/proper-way-to-optimize-css-3-animations-for-ios-mobile-safari" target="_blank" rel="noopener">這篇</a> 他是改 CSS top 導致發生神秘的閃爍事件…</span></p>
+<p><span style="color: black;"> 像是StackOverflow <a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/6564911/webkit-translate3d-issues-peek-thru">這篇</a> 還有 <a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/6481894/proper-way-to-optimize-css-3-animations-for-ios-mobile-safari">這篇</a> 他是改 CSS top 導致發生神秘的閃爍事件…</span></p>
 <p><span style="color: black;">最後使用動態增加translatde3d 並且 reset 的 <strike>爛招 </strike>解法&nbsp; </span><span style="color: black;">&nbsp;</span></p>
 <p><span style="color: black;">後來將以下的 css 指定給子節點 問題就解決了</span></p>
 <p><pre><pre style="background-color: white; font-family: consolas,'Courier New',courier,monospace; font-size: 12px; margin: 0em; width: 100%;"><span style="color: maroon;">transform</span>: <span style="color: maroon;">translate3d</span>(<span style="color: maroon;">0</span>,<span style="color: maroon;">0</span>,<span style="color: maroon;">0</span>);</pre><pre style="background-color: white; font-family: consolas,'Courier New',courier,monospace; font-size: 12px; margin: 0em; width: 100%;"><span style="color: maroon;">-webkit-transform</span>: <span style="color: maroon;">translate3d</span>(<span style="color: maroon;">0</span>,<span style="color: maroon;">0</span>,<span style="color: maroon;">0</span>);</pre></pre><br><strong>補充</strong><br>回家後看到jsconsole/jsbin的作者 Remy Sharp 大大的影片 </p>
-<iframe allowfullscreen frameborder="0" height="315" src="http://www.youtube.com/embed/IKl78ZgJzm4" width="560"></iframe>
+<iframe allowfullscreen="" frameborder="0" height="315" src="http://www.youtube.com/embed/IKl78ZgJzm4" width="560"></iframe>
 
 <p><strong><span style="color: #333333;">造成我畫面閃動的原因 應該是跟iOS的硬體加速有關 </span></strong></p>
 <p><strong><span style="color: red;">故需要Reset translate3d …..</span></strong></p>
 <p><strong><strike>真。他x的&nbsp; 上一次遇到這種神秘的問題 是面對高級瀏覽器 IE 6 ……………</strike>&nbsp;</strong></p>
-<p><strong>References</strong><br><a href="http://stackoverflow.com/questions/tagged/translate3d" target="_blank" rel="noopener">http://stackoverflow.com/questions/tagged/translate3d</a></p>
+<p><strong>References</strong><br><a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/tagged/translate3d">http://stackoverflow.com/questions/tagged/translate3d</a></p>
 
       
     </div>
@@ -162,7 +160,7 @@
 <section id="comment">
   <h1 class="title">Comments</h1>
   <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
 </section>
 </div></div>
@@ -175,20 +173,16 @@
 </div>
 
   <div class="widget gravatar">
-    <div class="entry">
-        Halo, This is <strong>Ryan Wu</strong> from Taiwan.
-    </div>
-    
     <div class="gravatar-wrap">
       <a href="/about/">
-        <img class="gravatar-img" src="https://www.gravatar.com/avatar/598af4e5c82136268d9009571be31026?s=150" alt="Ryan Wu">    
+        <img class="gravatar-img" src="https://www.ereo-creatives.com/img/team/img-1.png" alt="Ryan Wu">
       </a>
       
-      <a href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
+      <a target="_blank" rel="noopener" href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       
     </div>
-    
+
 </div>
 
   
@@ -231,7 +225,7 @@
   
   Ryan Wu - <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>
   
-  <p>It's all yours under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
+  <p>It's all yours under <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
 </div>
 <div class="clearfix"></div>
 </footer>

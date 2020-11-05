@@ -5,7 +5,7 @@
   
   <title>Archives: 2013/7 | Ryan Wu</title>
   <meta name="author" content="Ryan Wu">
-  <meta name="description" content="Ryan Wu, Front end JavaScirpt + iOS developer, Co-founder of EREO Creatives">
+  <meta name="description" content="Ryan Wu, JavaScript lover. Full stack JavaScript + iOS developer. Co-founder of EREO Creatives">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:site_name" content="Ryan Wu"/>
   <meta property="og:image" content="http://www.ereo-creatives.com/img/team/img-1.png"/>
@@ -35,14 +35,14 @@
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css" />
 
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 
 <body>
 	<div id="page-wrap">
 	<header id="header" class="inner"><div class="alignleft">
 	<h1><a href="/">Ryan Wu</a></h1>
-	<h2>I code to make people live better.</h2>
+	<h2>I code and I know things</h2>
 </div>
 <nav id="main-nav" class="alignright">
 	<ul>
@@ -61,8 +61,6 @@
 		<li class="menuItem"><a href="/archives">Archives</a></li>
 		
 		<li class="menuItem"><a href="/about">About</a></li>
-		
-		<li class="menuItem"><a href="http://zhblog.ryanwu.me">中文博客</a></li>
 		
 	</ul>
 	<div class="clearfix"></div>
@@ -104,8 +102,8 @@
     </header>
     <div class="entry">
       
-        <p>###History of my default shell<br>I started to learn <a href="http://en.wikipedia.org/wiki/C_shelluse" target="_blank" rel="noopener">C Shell</a> because of the part-time job I had got during university. They were using <a href="http://www.freebsd.org/" target="_blank" rel="noopener">FreeBSD</a> as the default working environment. At the second year of the job, I tried <a href="http://zh.wikipedia.org/wiki/Tcsh" target="_blank" rel="noopener">Tcsh</a> and <a href="https://en.wikipedia.org/wiki/Bash" target="_blank" rel="noopener">Bash</a>, then made <strong>Bash</strong> my default shell.</p>
-<p>From time to time, I started to use Mac in recent years and also changed to use <a href="http://www.zsh.org/" target="_blank" rel="noopener">zsh</a>.</p>
+        <p>###History of my default shell<br>I started to learn <a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/C_shelluse">C Shell</a> because of the part-time job I had got during university. They were using <a target="_blank" rel="noopener" href="http://www.freebsd.org/">FreeBSD</a> as the default working environment. At the second year of the job, I tried <a target="_blank" rel="noopener" href="http://zh.wikipedia.org/wiki/Tcsh">Tcsh</a> and <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Bash">Bash</a>, then made <strong>Bash</strong> my default shell.</p>
+<p>From time to time, I started to use Mac in recent years and also changed to use <a target="_blank" rel="noopener" href="http://www.zsh.org/">zsh</a>.</p>
       
     </div>
     <footer>
@@ -158,7 +156,7 @@
       
         <video class="videoElement"><br>    <source src="http://www.youtube.com/watch?v=Qc40YDFA4Bg" type="video/youtube"><br></video>
 
-<p>Very impressive trailer. Check the <a href="http://h5bp.github.io/Effeckt.css/dist/" target="_blank" rel="noopener">Effeckt.css Github</a></p>
+<p>Very impressive trailer. Check the <a target="_blank" rel="noopener" href="http://h5bp.github.io/Effeckt.css/dist/">Effeckt.css Github</a></p>
 
       
     </div>
@@ -202,19 +200,16 @@
     </header>
     <div class="entry">
       
-        <p>Usually I used to use a single server to host several developing or experimental projects. Thus I need a quick solution to forward different request to these services. I had tried to use <a href="http://nginx.org/" target="_blank" rel="noopener">nginx</a> before. But now I have a easier way to do so.</p>
+        <p>Usually I used to use a single server to host several developing or experimental projects. Thus I need a quick solution to forward different request to these services. I had tried to use <a target="_blank" rel="noopener" href="http://nginx.org/">nginx</a> before. But now I have a easier way to do so.</p>
 <ol>
 <li><p><strong>require modules</strong></p>
 <ul>
-<li><a href="http://underscorejs.org/" target="_blank" rel="noopener">underscode</a></li>
-<li><a href="https://github.com/nodejitsu/node-http-proxy" target="_blank" rel="noopener">node-http-proxy</a><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>),</span><br><span class="line">    _ = <span class="built_in">require</span>(<span class="string">'underscore'</span>),</span><br><span class="line">    httpProxy = <span class="built_in">require</span>(<span class="string">'http-proxy'</span>);</span><br></pre></td></tr></table></figure>
-</li>
+<li><a target="_blank" rel="noopener" href="http://underscorejs.org/">underscode</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/nodejitsu/node-http-proxy">node-http-proxy</a><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>),</span><br><span class="line">    _ = <span class="built_in">require</span>(<span class="string">&#x27;underscore&#x27;</span>),</span><br><span class="line">    httpProxy = <span class="built_in">require</span>(<span class="string">&#x27;http-proxy&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p><strong>config proxy(forward) and redirect mappings</strong> (hostname based)</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> proxyOptions = &#123;</span><br><span class="line">  router: &#123;</span><br><span class="line">    <span class="string">"api.testAppX.com"</span>     : <span class="string">'localhost:2041'</span>,</span><br><span class="line">    <span class="string">"dev.api.testAppX.com"</span> : <span class="string">'localhost:2042'</span>,</span><br><span class="line">    <span class="string">"www.testAppY.com"</span>     : <span class="string">'localhost:10520'</span>,</span><br><span class="line">    <span class="string">"test.oldApps.com"</span>     : <span class="string">'localhost:10520'</span>,</span><br><span class="line">    <span class="string">'bc.ryanwu.co'</span>         : <span class="string">'localhost:8888'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br><span class="line">  redirectOptions = &#123;</span><br><span class="line">    <span class="string">'olddomain.com'</span>      : <span class="string">'http://newdomain.com/'</span>,</span><br><span class="line">    <span class="string">'www.olddomain.com'</span>  : <span class="string">'http://newdomain.com/'</span>,</span><br><span class="line">    <span class="string">'blog.olddomain.com'</span> : <span class="string">'http://newdomain.com/blog/'</span></span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> proxyOptions = &#123;</span><br><span class="line">  router: &#123;</span><br><span class="line">    <span class="string">&quot;api.testAppX.com&quot;</span>     : <span class="string">&#x27;localhost:2041&#x27;</span>,</span><br><span class="line">    <span class="string">&quot;dev.api.testAppX.com&quot;</span> : <span class="string">&#x27;localhost:2042&#x27;</span>,</span><br><span class="line">    <span class="string">&quot;www.testAppY.com&quot;</span>     : <span class="string">&#x27;localhost:10520&#x27;</span>,</span><br><span class="line">    <span class="string">&quot;test.oldApps.com&quot;</span>     : <span class="string">&#x27;localhost:10520&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;bc.ryanwu.co&#x27;</span>         : <span class="string">&#x27;localhost:8888&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br><span class="line">  redirectOptions = &#123;</span><br><span class="line">    <span class="string">&#x27;olddomain.com&#x27;</span>      : <span class="string">&#x27;http://newdomain.com/&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;www.olddomain.com&#x27;</span>  : <span class="string">&#x27;http://newdomain.com/&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;blog.olddomain.com&#x27;</span> : <span class="string">&#x27;http://newdomain.com/blog/&#x27;</span></span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer>
@@ -266,16 +261,16 @@
     <div class="entry">
       
         <p>It’s very useful during iOS development</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">static GeneralData __strong *generalDataObject = nil;</span><br><span class="line"> </span><br><span class="line">@synthesize currentUser;</span><br><span class="line"> </span><br><span class="line">+(GeneralData *) getInstance</span><br><span class="line">&#123;</span><br><span class="line">    static dispatch_once_t pred;</span><br><span class="line">    dispatch_once(&amp;pred, ^&#123;</span><br><span class="line">        generalDataObject = [self new];</span><br><span class="line">    &#125;);</span><br><span class="line">    return generalDataObject;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">static GeneralData __strong *generalDataObject &#x3D; nil;</span><br><span class="line"> </span><br><span class="line">@synthesize currentUser;</span><br><span class="line"> </span><br><span class="line">+(GeneralData *) getInstance</span><br><span class="line">&#123;</span><br><span class="line">    static dispatch_once_t pred;</span><br><span class="line">    dispatch_once(&amp;pred, ^&#123;</span><br><span class="line">        generalDataObject &#x3D; [self new];</span><br><span class="line">    &#125;);</span><br><span class="line">    return generalDataObject;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><ol>
 <li><p>Add Data</p>
-<figure class="highlight plain"><figcaption><span>firstViewController.m</span></figcaption><table><tr><td class="code"><pre><span class="line">#import &quot;GeneralData.h&quot;;</span><br><span class="line"></span><br><span class="line">- (IBAction) passValueButton:(id)sender &#123; </span><br><span class="line">&#123;</span><br><span class="line">    User *user = [User new];</span><br><span class="line">    user.name = &quot;Mary Jane&quot;;</span><br><span class="line">    user.age = &quot;21&quot;;</span><br><span class="line">    [GeneralData sharedInstance].currentUser = user;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>firstViewController.m</span></figcaption><table><tr><td class="code"><pre><span class="line">#import &quot;GeneralData.h&quot;;</span><br><span class="line"></span><br><span class="line">- (IBAction) passValueButton:(id)sender &#123; </span><br><span class="line">&#123;</span><br><span class="line">    User *user &#x3D; [User new];</span><br><span class="line">    user.name &#x3D; &quot;Mary Jane&quot;;</span><br><span class="line">    user.age &#x3D; &quot;21&quot;;</span><br><span class="line">    [GeneralData sharedInstance].currentUser &#x3D; user;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Read Data</p>
-<figure class="highlight plain"><figcaption><span>secondViewController.m</span></figcaption><table><tr><td class="code"><pre><span class="line">#import &quot;GeneralData.h&quot;;</span><br><span class="line"></span><br><span class="line">- (void)viewDidLoad</span><br><span class="line">&#123;</span><br><span class="line">    [super viewDidLoad];</span><br><span class="line">    User *loggedInUser = [GeneralData sharedInstance].currentUser;</span><br><span class="line">    NSLog(@&quot;Name : %@&quot;, loggedInUser.name);</span><br><span class="line">    NSLog(@&quot;Age : %@&quot;, loggedInUser.age);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>secondViewController.m</span></figcaption><table><tr><td class="code"><pre><span class="line">#import &quot;GeneralData.h&quot;;</span><br><span class="line"></span><br><span class="line">- (void)viewDidLoad</span><br><span class="line">&#123;</span><br><span class="line">    [super viewDidLoad];</span><br><span class="line">    User *loggedInUser &#x3D; [GeneralData sharedInstance].currentUser;</span><br><span class="line">    NSLog(@&quot;Name : %@&quot;, loggedInUser.name);</span><br><span class="line">    NSLog(@&quot;Age : %@&quot;, loggedInUser.age);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>Reference : <a href="http://stackoverflow.com/questions/5720029/create-singleton-using-gcds-dispatch-once-in-objective-c" target="_blank" rel="noopener">StackOverflow</a></p>
+<p>Reference : <a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/5720029/create-singleton-using-gcds-dispatch-once-in-objective-c">StackOverflow</a></p>
 
       
     </div>
@@ -323,7 +318,7 @@
     </header>
     <div class="entry">
       
-        <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Allow: backspace, delete, tab, escape, and enter</span></span><br><span class="line">    <span class="keyword">if</span> ( event.keyCode == <span class="number">46</span> || </span><br><span class="line">         event.keyCode == <span class="number">8</span> || </span><br><span class="line">         event.keyCode == <span class="number">9</span> ||</span><br><span class="line">         event.keyCode == <span class="number">27</span> || </span><br><span class="line">         event.keyCode == <span class="number">13</span> || </span><br><span class="line">         <span class="comment">// Allow: Ctrl+A</span></span><br><span class="line">        (event.keyCode == <span class="number">65</span> &amp;&amp; event.ctrlKey === <span class="literal">true</span>) || </span><br><span class="line">         <span class="comment">// Allow: home, end, left, right</span></span><br><span class="line">        (event.keyCode &gt;= <span class="number">35</span> &amp;&amp; event.keyCode &lt;= <span class="number">39</span>)) &#123;</span><br><span class="line">             <span class="comment">// let it happen, don't do anything</span></span><br><span class="line">             <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// Ensure that it is a number and stop the keypress</span></span><br><span class="line">        <span class="keyword">if</span> (event.shiftKey || (event.keyCode &lt; <span class="number">48</span> || event.keyCode &gt; <span class="number">57</span>) &amp;&amp; </span><br><span class="line">            (event.keyCode &lt; <span class="number">96</span> || event.keyCode &gt; <span class="number">105</span> )) &#123;</span><br><span class="line">            event.preventDefault(); </span><br><span class="line">        &#125;   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Allow: backspace, delete, tab, escape, and enter</span></span><br><span class="line">    <span class="keyword">if</span> ( event.keyCode == <span class="number">46</span> || </span><br><span class="line">         event.keyCode == <span class="number">8</span> || </span><br><span class="line">         event.keyCode == <span class="number">9</span> ||</span><br><span class="line">         event.keyCode == <span class="number">27</span> || </span><br><span class="line">         event.keyCode == <span class="number">13</span> || </span><br><span class="line">         <span class="comment">// Allow: Ctrl+A</span></span><br><span class="line">        (event.keyCode == <span class="number">65</span> &amp;&amp; event.ctrlKey === <span class="literal">true</span>) || </span><br><span class="line">         <span class="comment">// Allow: home, end, left, right</span></span><br><span class="line">        (event.keyCode &gt;= <span class="number">35</span> &amp;&amp; event.keyCode &lt;= <span class="number">39</span>)) &#123;</span><br><span class="line">             <span class="comment">// let it happen, don&#x27;t do anything</span></span><br><span class="line">             <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// Ensure that it is a number and stop the keypress</span></span><br><span class="line">        <span class="keyword">if</span> (event.shiftKey || (event.keyCode &lt; <span class="number">48</span> || event.keyCode &gt; <span class="number">57</span>) &amp;&amp; </span><br><span class="line">            (event.keyCode &lt; <span class="number">96</span> || event.keyCode &gt; <span class="number">105</span> )) &#123;</span><br><span class="line">            event.preventDefault(); </span><br><span class="line">        &#125;   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer>
@@ -357,20 +352,16 @@
 </div>
 
   <div class="widget gravatar">
-    <div class="entry">
-        Halo, This is <strong>Ryan Wu</strong> from Taiwan.
-    </div>
-    
     <div class="gravatar-wrap">
       <a href="/about/">
-        <img class="gravatar-img" src="https://www.gravatar.com/avatar/598af4e5c82136268d9009571be31026?s=150" alt="Ryan Wu">    
+        <img class="gravatar-img" src="https://www.ereo-creatives.com/img/team/img-1.png" alt="Ryan Wu">
       </a>
       
-      <a href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
+      <a target="_blank" rel="noopener" href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       
     </div>
-    
+
 </div>
 
   
@@ -413,7 +404,7 @@
   
   Ryan Wu - <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>
   
-  <p>It's all yours under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
+  <p>It's all yours under <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
 </div>
 <div class="clearfix"></div>
 </footer>

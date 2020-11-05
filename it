@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   
-  <title>談創業家與專業經理人 | Ryan Wu</title>
+  <title>為什麼IT公司需要行銷人員? | Ryan Wu</title>
   <meta name="author" content="Ryan Wu">
-  <meta name="description" content="Ryan Wu, Front end JavaScirpt + iOS developer, Co-founder of EREO Creatives">
+  <meta name="description" content="Ryan Wu, JavaScript lover. Full stack JavaScript + iOS developer. Co-founder of EREO Creatives">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:title" content="談創業家與專業經理人"/>
+  <meta property="og:title" content="為什麼IT公司需要行銷人員?"/>
   <meta property="og:site_name" content="Ryan Wu"/>
   <meta property="og:image" content="http://www.ereo-creatives.com/img/team/img-1.png"/>
   
@@ -36,14 +36,14 @@
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css" />
 
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 
 <body>
 	<div id="page-wrap">
 	<header id="header" class="inner"><div class="alignleft">
 	<h1><a href="/">Ryan Wu</a></h1>
-	<h2>I code to make people live better.</h2>
+	<h2>I code and I know things</h2>
 </div>
 <nav id="main-nav" class="alignright">
 	<ul>
@@ -62,8 +62,6 @@
 		<li class="menuItem"><a href="/archives">Archives</a></li>
 		
 		<li class="menuItem"><a href="/about">About</a></li>
-		
-		<li class="menuItem"><a href="http://zhblog.ryanwu.me">中文博客</a></li>
 		
 	</ul>
 	<div class="clearfix"></div>
@@ -90,49 +88,58 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2012-02-25T04:28:01.000Z">Feb 24 2012</time>
+        <time datetime="2012-02-13T04:28:01.000Z">Feb 12 2012</time>
       
       
   
-    <h1 class="title">談創業家與專業經理人</h1>
+    <h1 class="title">為什麼IT公司需要行銷人員?</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>這是今天在Twitter上回應了<a href="http://twitter.com/#!/deduce" target="_blank" rel="noopener">@Deduce</a>大大的一段話</p>
-<blockquote>
-<p>我覺得專業經理人跟創業家有很大的相似點, 只是喜歡的生活型態不同罷了. </p>
+        <blockquote>
+<p><strong>我知道全世界只有10種人, 一種是懂Binary的, 一種是不懂的</strong></p>
 </blockquote>
-<p>這樣講或許有點草率，不過專業經理人和創業家的異同，其實在很多地方都有這類的討論</p>
-<p><strong><font size="4">到底這兩者差在哪?</font></strong></p>
-<p>下圖為 <a href="http://www.mindmapping.com.tw" target="_blank" rel="noopener">孫易新心智圖法</a> 網站彙整EMBA雜誌第295期文章”<a href="http://mag.chinatimes.com/mag-cnt.aspx?artid=7054" target="_blank" rel="noopener">創業家和專業經理人有何不同</a>”所得到的心智圖<a href="/images/20120224_110304.png"><img src="/images/20120224_110304.png" alt=""></a></p>
-<p>中午吃飯時順口問了同事對於這兩者之間的看法.</p>
-<p><a href="http://plurk.com/tonyq" target="_blank" rel="noopener">TonyQ</a>:字不一樣(當場毆飛)</p>
-<p><a href="http://zanyking.blogspot.com/" target="_blank" rel="noopener">Ian</a>覺得這兩者的驅動(Driven)不同, 專業經理人是透過指標(例如股價,效率,收入)來驅動, 創業家是透過目標(創造更好的Todo List, 雲端筆記本, 社群互動…)來驅動. (簡言之:Different motivation)。</p>
-<p>這兩者在現今社會也有著非常不同的印象</p>
-<ul>
-<li>專業經理人 : 普遍認知為<strong>妥善運用目前資源追求極大利益者</strong>  </li><li>創業家 : 普遍認知為<strong>尋求偉大夢想的實踐者</strong> </li>
-</ul>
-<p>加上在<strong>執行層面</strong>上來說，這兩者的確有非常大的<strong>重疊</strong>. 甚至有非常多的例子是從專業經理人成了創業家，從<a href="http://findbook.tw/book/9789867969217/basic" target="_blank" rel="noopener">創業家到執行長</a>。所以不論是企業管理研究或是創業圈都對這兩者有許許多多的討論與分析。<br>好多年前在BBS上有轉錄一篇文章, 叫做”<strong>天生注定當老闆</strong>”(剛剛Google找不到原文…只有許多<a href="http://tw.myblog.yahoo.com/bluesir30/article?mid=333&amp;prev=334&amp;l=f&amp;fid=6" target="_blank" rel="noopener">轉載與片段</a>)<br>其中提到的創業家特質，<u>很大一部分跟專業經理人所必須具備的特質是一樣的</u>。不過其中也提到創業家與專業經理人天生性格上最大的鴻溝是<font color="#0000a0"><strong>對於不可測及不確定變數的容忍</strong></font><font color="#000000"> (</font>簡言之就是對於風險的容忍程度。) </p>
-<p>用一個比喻來說，這兩者就像從不同的登山口，穿戴類似的裝備兩個登山者，不論面對颳風下雨都有著堅忍不拔的毅力，但面對每一個突發狀況的處理方式卻不完全相同。</p>
-<p><strong><font size="4">身為一個創業家需不需要有專業經理人的思維呢 ?</font></strong></p>
-<p>許多巨型企業(如IBM, Manpower)都有一個制度，就是把較為成熟的產品部門或技術團隊，切出去當成Branch。整個Branch的五管(包含支出與收入)都獨立運作責任自付。這造就出了許多十八般武藝樣樣精通的專業領導人才，若這些人離開後，踏上創業路，也往往都能建立起自己的一片天。</p>
-<p>剛剛在翻舊文時從我的Evernote發現一篇之前有意思的文章 <a href="http://www.managertoday.com.tw/?p=2299" target="_blank" rel="noopener">「專業經理人」比「創業家老闆」更愛錢？</a>其中談到非金錢動機在進場與退場行為中扮演的角色<strong>.</strong> 這篇文章提供了幾個假設供需要了解分析一間公司的人做參考</p>
-<p><a href="/images/20120224_lev.png"><img src="/images/20120224_lev.png" alt="ec"></a></p>
-<p>其中提出三個假設</p>
+<p>台灣的開發者/程式設計師, 素質好, 薪水不高. 這點是有目共睹的優秀(?)狀況.</p>
+<p>看到一篇<a target="_blank" rel="noopener" href="http://talkweb.eu/openweb/1142">文章</a>在探討行銷人員的存在目的, 就做個翻譯當紀錄.　</p>
+<p>警惕一下不誤正業半調子的我</p>
+<p><strong>如果沒有那些Marketing的傢伙:</strong></p>
 <ol>
-<li>在由專業經理人所掌管的公司裡，「市場經濟吸引力」與「進場可能性」呈正相關的可能性，大於由所有人管理的公司。</li>
-<li>由專業經理人管控的公司，比起由企業所有人身兼經理人的公司，更有可能因為經濟誘因愈小，而提高退出市場的可能性。</li>
-<li>在由專業經理人所管理的公司裡，「市場經濟吸引力」與「公司價格」兩者之間的正向關係，比起在由所有人管理的公司裡更為強烈。 </li>
+<li><p>更少人會知道我們 : 包括了我們的客戶 &amp;&amp; 朋友 &amp;&amp; Google上循線而來的人們</p>
+</li>
+<li><p><strong><span style="color: purple;">extends</span></strong> 1 = 更少的花費<strike>(俗稱Cost Down)</strike></p>
+</li>
+<li><p><strong><span style="color: purple;">implement</span></strong> 2 = 開發者薪水可以＋＋</p>
+</li>
+<li><p>不用給獎金 (或稱Commission, 回扣, 業務獎勵…)&nbsp; NOR 我正好”<strong>收到一封邀請</strong>“, 希望我去一間有優秀行銷團隊的公司工作</p>
+</li>
+<li><p>R.I.P GPWGFTCCW - 別說什麼擁有好功能的好產品可以改變世界<br><em><span style="color: #cccccc;">Great Product with great functionalities that can change the world.</span></em></p>
+</li>
 </ol>
-<p>在所謂<strong>浪頭上的產業</strong>(白話:市場熱錢的聚集處)，只有極少部分的公司是由所謂的專業經理人管理。排除企業導師等等的外部協助，身為一個資訊創業者，除了從做中學之外，對於專業經理人的思維與管理態度也必須要有一定程度的狩獵(最常見的切入點是行銷，專案管理，與人力資源管理)，否則就算募了一大筆錢或是擁有很好的Business Model，也很有可能被時代的潮流淹沒。</p>
-<p><strong><font size="4"></font></strong>&nbsp;</p>
-<p><strong><font size="4">去創業好還是去當專業經理人好?</font></strong></p>
-<p>隨著Diablo 3 即將發行，用這張D2圖來解釋最合理也不過</p>
-<p><a href="/images/20120224_skill.jpg"><img src="/images/20120224_skill.jpg" alt="skill"></a></p>
-<p>這世界上本來就沒有所謂完美的Career Path, <strong>你想玩什麼就玩什麼</strong>，如果現階段的環境無法達到滿足或讓你覺得生活無趣，那代表你需要一點改變了。上述提到的創業家的特質與中山大學創意管理教授劉常勇提出的<a href="http://www.inex.twmail.net/temp/p01/175.htm" target="_blank" rel="noopener">10D</a>是很可以參考的指標。</p>
-<p>基本上，累積自己的價值(點技能)都不會有壞處，但是在有限的資源(例如時間)內如何將這些技能在正確的時間發揮，就是每一個人都需要好好思考的了。</p>
+<p><strong>如果沒有那些社群管理員(或者相關的社群管理策略）</strong></p>
+<ol>
+<li><p><strong>沒有</strong>社群擁護我們 = 我們必須<strong>“用盡所有可能”</strong>自己測試我們所有產品<br>以網頁內容管理系統為例, 從功能測試, 模組相容測試到網頁使用這測試, 流覽器相容測試　都自己來.<br>養一個QA Team應該比較快 - 但是很貴 <img src="http://lh3.ggpht.com/-qUyjLi5ZBM8/TzfaqKQ3__I/AAAAAAAABn4/6keiqzzQfb8/wlEmoticon-smile%25255B2%25255D.png?imgmax=800" alt="Smile"></p>
+</li>
+<li><p>沒有<strong>社群</strong>擁護我們 = 要怎麼知道改怎麼改善?又或者知道客戶的需求? 　<br>如果不是<u>熱情的社群</u>提供大量意見供<u>篩選</u>, 而是靠著少數客戶的意見想法作產品決策,<br>那跟<strong>作外包接案</strong>有什麼不同???</p>
+</li>
+<li><p>沒有社群<strong>擁護</strong>我們 = 怎麼獲得下一個新產品的好點子?<br>創業圈很愛說”怎麼滿足使用者的需求”, 沒有人告訴你, 只能問天了.</p>
+</li>
+<li><p>沒有社群擁護<strong>我們 </strong>= 怎麼找到有人可以告訴你　“你他Ｘ的<span style="color: red;"><strong>錯</strong></span>了”<br>懸崖勒馬, 亡羊補牢其實有時候有用. 但往往都是洗頭洗一半將錯就錯.</p>
+</li>
+<li><p><strong>沒有社群擁護我們 </strong>= 怎麼找到有人可以幫你寫詳細的文件 /&nbsp; 抓Bug / 分享產品的喜悅 / 甚至鼓勵你</p>
+</li>
+</ol>
+<blockquote>
+<p><span style="font-size: small;">唉呦不錯喔！我喜歡你們的產品</span></p>
+</blockquote>
+<p>原文最下面附上這句話</p>
+<p>*_ I am so sorry, but someone should change the ordered list to start from 0/zero/. Starting from 1 is so lame._</p>
+<p>翻譯 - 我很抱歉, 但是有人應該把上面的清單改成從0開始. 從1開始很鳥.</p>
+<p>看到這句話, 我的認知除了身為ＲＤ的老梗以外, </p>
+<p>這句話其實深深暗喻　：　<strong>行銷/社群的計畫策略, 就算不在一開始投入預算, 也該列入計畫中. </strong></p>
+<p>總結</p>
+<p><strong>Stay focus ,Go to marketing, listen to users, evaluate feedback, keep improving/shipping</strong></p>
 
       
     </div>
@@ -142,15 +149,10 @@
           
   
   <div class="categories">
-    <a href="/categories/Entrepreneurship/">Entrepreneurship</a>
+    <a href="/categories/Marketing/">Marketing</a>
   </div>
 
           
-  
-  <div class="tags">
-    <a class="tag" href="/tags/Entrepreneur/">Entrepreneur</a>, <a class="tag" href="/tags/Manager/">Manager</a>
-  </div>
-
           
   <div class="addthis addthis_toolbox addthis_default_style">
     
@@ -179,7 +181,7 @@
 <section id="comment">
   <h1 class="title">Comments</h1>
   <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
 </section>
 </div></div>
@@ -192,20 +194,16 @@
 </div>
 
   <div class="widget gravatar">
-    <div class="entry">
-        Halo, This is <strong>Ryan Wu</strong> from Taiwan.
-    </div>
-    
     <div class="gravatar-wrap">
       <a href="/about/">
-        <img class="gravatar-img" src="https://www.gravatar.com/avatar/598af4e5c82136268d9009571be31026?s=150" alt="Ryan Wu">    
+        <img class="gravatar-img" src="https://www.ereo-creatives.com/img/team/img-1.png" alt="Ryan Wu">
       </a>
       
-      <a href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
+      <a target="_blank" rel="noopener" href="https://twitter.com/ryanhanwu" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ryanhanwu</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       
     </div>
-    
+
 </div>
 
   
@@ -248,7 +246,7 @@
   
   Ryan Wu - <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>
   
-  <p>It's all yours under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
+  <p>It's all yours under <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons BY 3.0</a>.</p>
 </div>
 <div class="clearfix"></div>
 </footer>
